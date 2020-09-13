@@ -1,6 +1,8 @@
+import 'package:apps_kecantikan/widgets/home_card_grid_widget.dart';
 import 'package:apps_kecantikan/widgets/home_card_row_widget.dart';
 import 'package:apps_kecantikan/widgets/home_carousel_widget.dart';
 import 'package:apps_kecantikan/widgets/home_list_icon_widget.dart';
+import 'package:apps_kecantikan/widgets/home_rec_article.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
@@ -59,6 +61,14 @@ class _HomepageState extends State<Homepage> {
                       height: 12.0,
                     ),
                     HomeCardRow(),
+                    SizedBox(
+                      height: 4.0,
+                    ),
+                    HomeCardGrid(),
+                    SizedBox(
+                      height: 4.0,
+                    ),
+                    RecommendArticle(),
                   ],
                 ),
               ),
