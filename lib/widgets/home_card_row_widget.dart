@@ -29,7 +29,6 @@ class _HomeCardRowState extends State<HomeCardRow> {
           ],
         ),
         Container(
-          color: Colors.green,
           height: 170.0,
           child: GridView.count(
             crossAxisCount: 3,
