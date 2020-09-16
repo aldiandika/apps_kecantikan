@@ -1,3 +1,4 @@
+import 'package:apps_kecantikan/widgets/cart_product_widget.dart';
 import 'package:apps_kecantikan/widgets/cart_telemedicine_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -33,6 +34,8 @@ class _CartPageState extends State<CartPage> {
                 // Cart Telemedicine
                 CartTelemedicine(),
                 // End of Cart Telemedicine
+                SizedBox(height:24.0,),
+                CartProduct(),
               ],
             ),
           ),
