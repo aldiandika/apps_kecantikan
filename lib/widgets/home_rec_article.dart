@@ -29,7 +29,6 @@ class _RecommendArticleState extends State<RecommendArticle> {
           ],
         ),
         Container(
-          height: MediaQuery.of(context).size.height * 0.3,
           margin: EdgeInsets.only(top: 4.0),
           child: Row(
             children: [
@@ -46,8 +45,8 @@ class _RecommendArticleState extends State<RecommendArticle> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
-                        height: 140.0,
-                        color: Colors.blueGrey,
+//                        height: MediaQuery.of(context).size.height * 0.2,
+//                        height: 100.0,
                         child: Image.asset(
                           'assets/images/cleansing.jpg',
                           fit: BoxFit.cover,
@@ -73,13 +72,17 @@ class _RecommendArticleState extends State<RecommendArticle> {
               ),
               Container(
                 width: MediaQuery.of(context).size.width * 0.5,
-                height: MediaQuery.of(context).size.height * 0.3,
                 child: GridView.count(
                   crossAxisCount: 2,
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
-                  childAspectRatio: (1 / 1.05),
-                  padding: EdgeInsets.only(top: 2.0, bottom: 0.0, right: 1.0, left: 1.0,),
+                  childAspectRatio: (1 / 1),
+                  padding: EdgeInsets.only(
+                    top: 0.0,
+                    bottom: 0.0,
+                    right: 1.0,
+                    left: 1.0,
+                  ),
                   children: generateNumbers().map((int i) {
                     return Container(
                       child: Card(
@@ -93,6 +96,7 @@ class _RecommendArticleState extends State<RecommendArticle> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
+                              height: MediaQuery.of(context).size.height * 0.07,
                               child: Image.asset(
                                 'assets/images/cleansing.jpg',
                                 fit: BoxFit.cover,

@@ -1,4 +1,5 @@
 
+import 'package:apps_kecantikan/pages/cart_page.dart';
 import 'package:flutter/material.dart';
 
 class HomeListIcon extends StatefulWidget {
@@ -140,7 +141,12 @@ class _HomeListIconState extends State<HomeListIcon> {
                     Icons.card_giftcard,
                     color: Colors.grey,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => CartPage()),
+                    );
+                  },
                   color: Color(0xFFC7ECFA),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(
