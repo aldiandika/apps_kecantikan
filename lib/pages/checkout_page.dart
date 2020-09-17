@@ -4,6 +4,7 @@ import 'package:apps_kecantikan/widgets/checkout_address_widget.dart';
 import 'package:apps_kecantikan/widgets/checkout_payment_method_widget.dart';
 import 'package:apps_kecantikan/widgets/checkout_product_widget.dart';
 import 'package:apps_kecantikan/widgets/checkout_telemedicine_widget.dart';
+import 'package:apps_kecantikan/widgets/checkout_total_payment_widget.dart';
 import 'package:flutter/material.dart';
 
 class CheckoutPage extends StatefulWidget {
@@ -61,6 +62,12 @@ class _CheckoutPageState extends State<CheckoutPage> {
                       ),
 
                       PaymentMethod(),
+
+                      SizedBox(
+                        height: 8.0,
+                      ),
+
+                      TotalPaymentWidget(),
                     ],
                   ),
                 ),
