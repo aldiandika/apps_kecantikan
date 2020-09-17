@@ -1,6 +1,7 @@
 import 'package:apps_kecantikan/widgets/cart_product_widget.dart';
 import 'package:apps_kecantikan/widgets/cart_telemedicine_widget.dart';
 import 'package:apps_kecantikan/widgets/checkout_address_widget.dart';
+import 'package:apps_kecantikan/widgets/checkout_payment_method_widget.dart';
 import 'package:apps_kecantikan/widgets/checkout_product_widget.dart';
 import 'package:apps_kecantikan/widgets/checkout_telemedicine_widget.dart';
 import 'package:flutter/material.dart';
@@ -54,6 +55,12 @@ class _CheckoutPageState extends State<CheckoutPage> {
                       // Checkout Product
                       CheckoutProduct(),
                       // End of Checkout Product
+
+                      SizedBox(
+                        height: 8.0,
+                      ),
+
+                      PaymentMethod(),
                     ],
                   ),
                 ),
