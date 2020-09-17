@@ -32,6 +32,8 @@ class _CardCheckoutTeleState extends State<CardCheckoutTele> {
                 margin: EdgeInsets.only(
                   bottom: 6.0,
                   top: 6.0,
+                  left: 8.0,
+                  right: 8.0,
                 ),
                 child: Row(
                   children: [
@@ -47,7 +49,7 @@ class _CardCheckoutTeleState extends State<CardCheckoutTele> {
                             Text(
                               'dr. Zara, Spk.',
                               style: TextStyle(
-                                fontSize: 14.0,
+                                fontSize: 12.0,
                                 fontWeight: FontWeight.w900,
                               ),
                               overflow: TextOverflow.clip,
@@ -58,21 +60,21 @@ class _CardCheckoutTeleState extends State<CardCheckoutTele> {
                             Text(
                               'Klinik Jaya Abadi',
                               style: TextStyle(
-                                fontSize: 12.0,
+                                fontSize: 11.0,
                                 color: Colors.grey,
                               ),
                             ),
                             Text(
                               '11 September 2020',
                               style: TextStyle(
-                                fontSize: 12.0,
+                                fontSize: 11.0,
                                 color: Colors.grey,
                               ),
                             ),
                             Text(
                               '09.00 - 09.30',
                               style: TextStyle(
-                                fontSize: 12.0,
+                                fontSize: 11.0,
                                 color: Colors.grey,
                               ),
                             ),
@@ -92,7 +94,7 @@ class _CardCheckoutTeleState extends State<CardCheckoutTele> {
                             Text(
                               'Rp 75.000,00',
                               style: TextStyle(
-                                fontSize: 14.0,
+                                fontSize: 12.0,
                                 fontWeight: FontWeight.w800,
                                 color: Colors.black,
                               ),
