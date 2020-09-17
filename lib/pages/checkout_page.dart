@@ -1,5 +1,6 @@
 import 'package:apps_kecantikan/widgets/cart_product_widget.dart';
 import 'package:apps_kecantikan/widgets/cart_telemedicine_widget.dart';
+import 'package:apps_kecantikan/widgets/checkout_address_widget.dart';
 import 'package:apps_kecantikan/widgets/checkout_telemedicine_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -33,9 +34,18 @@ class _CheckoutPageState extends State<CheckoutPage> {
                   ),
                   child: Column(
                     children: [
+                      // Checkout Address
+                      CheckoutAddress(),
+                      // End of Checkout Address
+
+                      SizedBox(
+                        height: 24.0,
+                      ),
+
                       // Checkout Telemedicine
                       CheckoutTelemedicine(),
                       // End of Checkout Telemedicine
+
                       SizedBox(
                         height: 24.0,
                       ),
