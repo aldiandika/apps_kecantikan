@@ -1,3 +1,4 @@
+import 'package:apps_kecantikan/pages/checkout_page.dart';
 import 'package:apps_kecantikan/widgets/cart_product_widget.dart';
 import 'package:apps_kecantikan/widgets/cart_telemedicine_widget.dart';
 import 'package:flutter/material.dart';
@@ -79,7 +80,13 @@ class _CartPageState extends State<CartPage> {
                             borderRadius:
                                 BorderRadius.all(Radius.circular(8.0)),
                           ),
-                          onPressed: () => print('Checkout produk'),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CheckoutPage()),
+                            );
+                          },
                         ),
                       ),
                     ],
