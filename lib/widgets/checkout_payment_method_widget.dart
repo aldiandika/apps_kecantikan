@@ -64,7 +64,7 @@ class _PaymentMethodState extends State<PaymentMethod> {
                           borderRadius: BorderRadius.all(
                               Radius.circular(8.0)),
                         ),
-                        onPressed: () => print('Ubah kurir'),
+                        onPressed: () => print('Ubah metode bayar'),
                       ),
                     ),
                   ),
