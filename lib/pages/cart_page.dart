@@ -9,7 +9,6 @@ class CartPage extends StatefulWidget {
 }
 
 class _CartPageState extends State<CartPage> {
-  List<int> generateNumbers() => List<int>.generate(4, (i) => i + 1);
 
   @override
   Widget build(BuildContext context) {

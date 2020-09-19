@@ -1,5 +1,6 @@
 
 import 'package:apps_kecantikan/pages/cart_page.dart';
+import 'package:apps_kecantikan/pages/product_page.dart';
 import 'package:flutter/material.dart';
 
 class HomeListIcon extends StatefulWidget {
@@ -144,7 +145,7 @@ class _HomeListIconState extends State<HomeListIcon> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => CartPage()),
+                      MaterialPageRoute(builder: (context) => ProductPage()),
                     );
                   },
                   color: Color(0xFFC7ECFA),
