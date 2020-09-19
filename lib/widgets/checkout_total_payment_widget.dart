@@ -1,3 +1,4 @@
+import 'package:apps_kecantikan/pages/transfer_page.dart';
 import 'package:flutter/material.dart';
 
 class TotalPaymentWidget extends StatefulWidget {
@@ -14,7 +15,10 @@ class _TotalPaymentWidgetState extends State<TotalPaymentWidget> {
       child: Card(
         elevation: 1.0,
         child: Container(
-          margin: EdgeInsets.symmetric(horizontal : 12.0, vertical: 6.0,),
+          margin: EdgeInsets.symmetric(
+            horizontal: 12.0,
+            vertical: 6.0,
+          ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -32,15 +36,16 @@ class _TotalPaymentWidgetState extends State<TotalPaymentWidget> {
                         color: Colors.black,
                       ),
                     ),
-                    SizedBox(height: 8.0,),
+                    SizedBox(
+                      height: 8.0,
+                    ),
                     Text(
                       'Rp 1.234.000,00',
                       textAlign: TextAlign.left,
                       style: TextStyle(
                           fontSize: 11.0,
                           fontWeight: FontWeight.w800,
-                          color: Colors.grey
-                      ),
+                          color: Colors.grey),
                       overflow: TextOverflow.clip,
                     ),
                   ],
@@ -60,10 +65,16 @@ class _TotalPaymentWidgetState extends State<TotalPaymentWidget> {
                     textColor: Colors.white,
                     elevation: 3.0,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(
-                          Radius.circular(8.0)),
+                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
                     ),
-                    onPressed: () => print('Order'),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => TransferPage(),
+                        ),
+                      );
+                    },
                   ),
                 ),
               ),

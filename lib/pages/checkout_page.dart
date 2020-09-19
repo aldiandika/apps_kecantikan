@@ -22,7 +22,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
-              Navigator.pop(context, 'Back to Home');
+              Navigator.pop(context, 'Back');
             },
           ),
         ),
