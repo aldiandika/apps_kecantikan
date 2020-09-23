@@ -28,7 +28,43 @@ class _ProductPageState extends State<ProductPage> {
             Expanded(
               flex: 1,
               child: Container(
-                color: Colors.blue,
+                width: MediaQuery.of(context).size.width,
+                padding: EdgeInsets.all(10),
+                child: Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        flex: 4,
+                        child: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                            color: Color(0xFFEBEBEB),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: TextField(
+                            cursorColor: Color(0xff659E8D),
+                            decoration: InputDecoration(
+                                hintText: "Cari Produk",
+                                border: InputBorder.none,
+                                suffixIcon: IconButton(
+                                    icon: Icon(Icons.search), onPressed: () {})),
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 1,
+                        child: IconButton(
+                          icon: Image.asset(
+                            "assets/icons/filter.png",
+                            color: Color(0xFF888888),
+                          ),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
             Expanded(
@@ -40,7 +76,8 @@ class _ProductPageState extends State<ProductPage> {
                     shrinkWrap: true,
                     physics: NeverScrollableScrollPhysics(),
                     childAspectRatio: (3 / 4),
-                    padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
                     children: generateNumbers().map((int i) {
                       return CardProduct();
                     }).toList(),
