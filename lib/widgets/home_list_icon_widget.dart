@@ -1,7 +1,7 @@
-
 import 'package:apps_kecantikan/pages/cart_page.dart';
 import 'package:apps_kecantikan/pages/product_page.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomeListIcon extends StatefulWidget {
   @override
@@ -26,7 +26,9 @@ class _HomeListIconState extends State<HomeListIcon> {
                     Icons.phone,
                     color: Colors.grey,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.toNamed('/doctorDashboard');
+                  },
                   color: Color(0xFFC7ECFA),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(
@@ -55,7 +57,9 @@ class _HomeListIconState extends State<HomeListIcon> {
                     Icons.phone,
                     color: Colors.grey,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.toNamed('/telemedicineDashboard');
+                  },
                   color: Color(0xFFC7ECFA),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(
