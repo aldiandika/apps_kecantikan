@@ -9,24 +9,24 @@ class CardProduct extends StatefulWidget {
 class _CardProductState extends State<CardProduct> {
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 1.0,
-      margin: EdgeInsets.symmetric(
-        vertical: 6.0,
-        horizontal: 6.0,
-      ),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(
-          Radius.circular(8.0),
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => ProductDetailPage()),
+        );
+      },
+      child: Card(
+        elevation: 1.0,
+        margin: EdgeInsets.symmetric(
+          vertical: 6.0,
+          horizontal: 6.0,
         ),
-      ),
-      child: GestureDetector(
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => ProductDetailPage()),
-          );
-        },
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(8.0),
+          ),
+        ),
         child: Column(
           children: [
             Container(
@@ -38,7 +38,6 @@ class _CardProductState extends State<CardProduct> {
                 fit: BoxFit.contain,
               ),
             ),
-
             Container(
               padding: EdgeInsets.all(2.0),
               margin: EdgeInsets.all(2.0),
@@ -55,7 +54,12 @@ class _CardProductState extends State<CardProduct> {
             ),
             Container(
               padding: EdgeInsets.all(2.0),
-              margin: EdgeInsets.only(top: 8.0, left: 2.0, right: 2.0, bottom: 2.0,),
+              margin: EdgeInsets.only(
+                top: 8.0,
+                left: 2.0,
+                right: 2.0,
+                bottom: 2.0,
+              ),
               alignment: Alignment.centerLeft,
               child: Text(
                 'Rp 130.000,00 ',
@@ -83,7 +87,12 @@ class _CardProductState extends State<CardProduct> {
             ),
             Container(
               padding: EdgeInsets.all(2.0),
-              margin: EdgeInsets.only(top: 8.0, left: 2.0, right: 2.0, bottom: 2.0,),
+              margin: EdgeInsets.only(
+                top: 8.0,
+                left: 2.0,
+                right: 2.0,
+                bottom: 2.0,
+              ),
               alignment: Alignment.centerRight,
               child: Text(
                 'Bandung',
