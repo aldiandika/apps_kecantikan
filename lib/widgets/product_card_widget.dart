@@ -9,24 +9,24 @@ class CardProduct extends StatefulWidget {
 class _CardProductState extends State<CardProduct> {
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => ProductDetailPage()),
-        );
-      },
-      child: Card(
-        elevation: 1.0,
-        margin: EdgeInsets.symmetric(
-          vertical: 6.0,
-          horizontal: 6.0,
+    return Card(
+      elevation: 1.0,
+      margin: EdgeInsets.symmetric(
+        vertical: 6.0,
+        horizontal: 6.0,
+      ),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(8.0),
         ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(
-            Radius.circular(8.0),
-          ),
-        ),
+      ),
+      child: GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => ProductDetailPage()),
+          );
+        },
         child: Column(
           children: [
             Container(

@@ -5,6 +5,8 @@ class ButtonBooking extends StatelessWidget {
   final Color txtColor;
   final Color bgnColor;
   final Function onPressed;
+  final double width;
+  final double fontSize;
 
   const ButtonBooking({
     Key key,
@@ -12,12 +14,14 @@ class ButtonBooking extends StatelessWidget {
     this.txtColor = Colors.black,
     this.bgnColor = Colors.white,
     this.onPressed,
+    this.width = 85,
+    this.fontSize,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 85,
+      width: width,
       height: 25,
       decoration: BoxDecoration(
         boxShadow: [
@@ -33,7 +37,10 @@ class ButtonBooking extends StatelessWidget {
       child: MaterialButton(
           child: Text(
             text,
-            style: TextStyle(color: txtColor),
+            style: TextStyle(
+              color: txtColor,
+              fontSize: fontSize,
+            ),
           ),
           onPressed: onPressed),
     );
