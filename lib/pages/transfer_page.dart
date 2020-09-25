@@ -1,4 +1,4 @@
-import 'package:apps_kecantikan/pages/home_page.dart';
+import 'package:apps_kecantikan/widgets/bottom_nav_widget.dart';
 import 'package:flutter/material.dart';
 
 class TransferPage extends StatefulWidget {
@@ -158,7 +158,7 @@ class _TransferPageState extends State<TransferPage> {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => Homepage()),
+                                          builder: (context) => BottomNavWidget()),
                                     );
                                   },
                                 ),

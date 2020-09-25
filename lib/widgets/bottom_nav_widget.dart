@@ -1,3 +1,4 @@
+import 'package:apps_kecantikan/pages/chat_page.dart';
 import 'package:apps_kecantikan/pages/home_page.dart';
 import 'package:apps_kecantikan/pages/inbox_page.dart';
 import 'package:apps_kecantikan/pages/mybooking_page.dart';
@@ -23,7 +24,8 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
     final listPage = <Widget>[
       Homepage(),
       MybookingPage(),
-      InboxPage(),
+//      InboxPage(),
+      ChatPage(),
       ProfilePage(),
     ];
 
