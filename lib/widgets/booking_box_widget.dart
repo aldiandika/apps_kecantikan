@@ -1,3 +1,4 @@
+import 'package:apps_kecantikan/pages/chat_page.dart';
 import 'package:apps_kecantikan/widgets/button_Booking_widget.dart';
 import 'package:apps_kecantikan/widgets/search_filter.dart';
 import 'package:flutter/material.dart';
@@ -159,6 +160,13 @@ class BookingBox extends StatelessWidget {
                                       fontSize: 10,
                                       txtColor: Colors.white,
                                       bgnColor: Colors.blue,
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => ChatPage()),
+                                        );
+                                      },
                                     )
                                   : Container(),
                         ],

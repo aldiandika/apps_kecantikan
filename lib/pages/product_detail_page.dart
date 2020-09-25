@@ -1,4 +1,5 @@
 import 'package:apps_kecantikan/pages/cart_page.dart';
+import 'package:apps_kecantikan/pages/chat_page.dart';
 import 'package:apps_kecantikan/widgets/product_detail_review_item_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -226,7 +227,13 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                         borderRadius:
                                         BorderRadius.all(Radius.circular(4.0)),
                                       ),
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => ChatPage()),
+                                        );
+                                      },
                                     ),
                                   ),
                                 ),

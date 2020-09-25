@@ -6,11 +6,29 @@ class ChatPage extends StatefulWidget {
 }
 
 class _ChatPageState extends State<ChatPage> {
+  List<MessageItem> items = List<MessageItem>();
+
+  TextEditingController msgCon = TextEditingController();
+
+  void sendMessage() {
+    if (msgCon.text.isEmpty) {
+      return;
+    } else {
+      setState(() {
+        print(msgCon.text);
+        items.insert(0, MessageItem('you', msgCon.text));
+        items.insert(0, MessageItem('dr. Zara', msgCon.text));
+      });
+    }
+    msgCon.clear();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
+          //Appbar
           Container(
             color: Color(0xFF25A0DE),
             height: 120.0,
@@ -26,7 +44,7 @@ class _ChatPageState extends State<ChatPage> {
                       color: Colors.white,
                     ),
                     onPressed: () {
-                      Navigator.pop(context, 'Back to Home');
+                      Navigator.pop(context, 'Back');
                     },
                   ),
                 ),
@@ -67,24 +85,82 @@ class _ChatPageState extends State<ChatPage> {
               ],
             ),
           ),
+
+          //Body
           Expanded(
             flex: 4,
             child: Container(
               color: Colors.black12,
+              padding: EdgeInsets.symmetric(horizontal: 8.0,),
+              child: ListView.builder(
+                  itemCount: items.length,
+                  reverse: true,
+                  itemBuilder: (context, index) {
+                    MessageItem item = items[index];
+                    return Container(
+                      alignment: (item.user == 'you')
+                          ? Alignment.centerRight
+                          : Alignment.centerLeft,
+                      child: Card(
+                        elevation: 4.0,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(6.0),
+                        ),
+                        child: Container(
+                          padding: EdgeInsets.all(4.0),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(6.0),
+                            color: (item.user == 'you')
+                                ? Color(0xFF25A0DE)
+                                : Colors.white,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Text(
+                                item.user,
+                                style: TextStyle(
+                                  fontSize: 12.0,
+                                  color: (item.user == 'you')
+                                      ? Colors.white
+                                      : Color(0xFF25A0DE),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 8.0,
+                              ),
+                              Text(
+                                item.content,
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                  color: (item.user == 'you')
+                                      ? Colors.white
+                                      : Color(0xFF25A0DE),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    );
+                  }),
             ),
           ),
+
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
               width: MediaQuery.of(context).size.width,
               child: ListTile(
                 title: TextField(
+                  controller: msgCon,
                 ),
                 trailing: IconButton(
                   icon: Icon(Icons.send),
                   color: Colors.blue,
                   disabledColor: Colors.grey,
-                  onPressed: ()=> print('Kirim'),
+                  onPressed: sendMessage
                 ),
               ),
             ),
@@ -93,4 +169,11 @@ class _ChatPageState extends State<ChatPage> {
       ),
     );
   }
+}
+
+class MessageItem {
+  String user;
+  String content;
+
+  MessageItem(this.user, this.content);
 }
