@@ -28,6 +28,7 @@ class _HomeListIconState extends State<HomeListIcon> {
                   ),
                   onPressed: () {
                     Get.toNamed('/doctorDashboard');
+                    // Get.toNamed('/klinikDashboard');
                   },
                   color: Color(0xFFC7ECFA),
                   shape: RoundedRectangleBorder(

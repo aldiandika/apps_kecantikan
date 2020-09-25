@@ -3,6 +3,7 @@ import 'package:apps_kecantikan/pages/booking_telemedicine_menu.dart';
 import 'package:apps_kecantikan/pages/doctor_dashboard_page.dart';
 import 'package:apps_kecantikan/pages/doctor_details.dart';
 import 'package:apps_kecantikan/pages/home_page.dart';
+import 'package:apps_kecantikan/pages/klinik_dashboard.dart';
 import 'package:apps_kecantikan/pages/telemedecine_dashboard.dart';
 import 'package:apps_kecantikan/pages/telemedecine_docter_detail.dart';
 import 'package:apps_kecantikan/widgets/bottom_nav_widget.dart';
@@ -49,6 +50,11 @@ class _MyAppState extends State<MyApp> {
             name: '/bookingTelemedicineMenu',
             page: () => BookingTelemedecineMenu(),
             transition: Transition.zoom),
+        GetPage(
+            name: '/klinikDashboard',
+            page: () => KlinikDashboardPage(),
+            transition: Transition.zoom),
+        
       ],
     );
   }
