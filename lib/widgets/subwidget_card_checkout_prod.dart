@@ -201,7 +201,7 @@ class _CardCheckoutProdState extends State<CardCheckoutProd> {
                     Row(
                       children: [
                         Expanded(
-                          flex: 4,
+                          flex: 6,
                           child: Text(
                             'Sampai di 17-19 September 2020 ',
                             textAlign: TextAlign.left,
@@ -214,7 +214,7 @@ class _CardCheckoutProdState extends State<CardCheckoutProd> {
                           ),
                         ),
                         Expanded(
-                          flex: 1,
+                          flex: 2,
                           child: Container(
                             width: 70.0,
                             height: 26.0,

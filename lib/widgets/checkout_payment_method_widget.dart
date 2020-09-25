@@ -35,7 +35,7 @@ class _PaymentMethodState extends State<PaymentMethod> {
               Row(
                 children: [
                   Expanded(
-                    flex: 4,
+                    flex: 6,
                     child: Text(
                       'Transfer BNI',
                       textAlign: TextAlign.left,
@@ -48,7 +48,7 @@ class _PaymentMethodState extends State<PaymentMethod> {
                     ),
                   ),
                   Expanded(
-                    flex: 1,
+                    flex: 2,
                     child: Container(
                       width: 70.0,
                       height: 26.0,

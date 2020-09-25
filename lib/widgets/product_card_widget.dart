@@ -30,7 +30,7 @@ class _CardProductState extends State<CardProduct> {
         child: Column(
           children: [
             Container(
-              height: 160.0,
+              height: 120.0,
               width: 180.0,
               color: Colors.white,
               child: Image.asset(
