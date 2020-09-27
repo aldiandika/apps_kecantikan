@@ -31,7 +31,7 @@ class _ChatPageState extends State<ChatPage> {
           //Appbar
           Container(
             color: Color(0xFF25A0DE),
-            height: 120.0,
+            height: 100.0,
             padding: EdgeInsets.all(8.0),
             alignment: Alignment.bottomCenter,
             child: Row(

@@ -1,6 +1,6 @@
 import 'package:apps_kecantikan/pages/chat_page.dart';
+import 'package:apps_kecantikan/widgets/bottom_nav_widget.dart';
 import 'package:apps_kecantikan/widgets/button_Booking_widget.dart';
-import 'package:apps_kecantikan/widgets/search_filter.dart';
 import 'package:flutter/material.dart';
 
 class BookingBox extends StatelessWidget {
@@ -218,7 +218,14 @@ class BookingBox extends StatelessWidget {
                   ),
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BottomNavWidget(tabIndex: 1,),
+                  ),
+                );
+              },
             ),
           ),
         ),

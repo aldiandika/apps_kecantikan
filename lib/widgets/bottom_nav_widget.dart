@@ -5,12 +5,26 @@ import 'package:apps_kecantikan/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavWidget extends StatefulWidget {
+  final int tabIndex;
+
+  const BottomNavWidget({Key key, this.tabIndex}) : super(key: key);
+
   @override
   _BottomNavWidgetState createState() => _BottomNavWidgetState();
 }
 
 class _BottomNavWidgetState extends State<BottomNavWidget> {
   int _selectedTabIndex = 0;
+
+  @override
+  void initState() {
+    if(widget.tabIndex != null){
+      _selectedTabIndex = widget.tabIndex;
+    }else{
+      _selectedTabIndex = 0;
+    }
+    super.initState();
+  }
 
   void _selectPage(int index) {
     setState(() {

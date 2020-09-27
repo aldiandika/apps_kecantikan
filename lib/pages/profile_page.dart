@@ -15,70 +15,68 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     double heightScreen = Get.height;
     double widthScreen = Get.width;
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Center(child: Text("Profile")),
-        ),
-        body: Container(
-          width: widthScreen,
-          height: heightScreen,
-          color: Colors.white,
-          padding: EdgeInsets.all(15),
-          child: ListView(
-            children: [
-              Container(child: ProfileHeader()),
-              SizedBox(height: 30),
-              Text(
-                "My Booking",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: Text("Profile")),
+      ),
+      body: Container(
+        width: widthScreen,
+        height: heightScreen,
+        color: Colors.white,
+        padding: EdgeInsets.all(15),
+        child: ListView(
+          children: [
+            Container(child: ProfileHeader()),
+            SizedBox(height: 30),
+            Text(
+              "My Booking",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
               ),
-              BookingBox(
-                date: "11 September 2020",
-                name: "dr. Zara Spk",
-                klinik: "Klinik Jaya Abadi",
-                schedule: "09.00 - 09.30",
-                countDays: "6 days to go",
-                btnText: "See All",
-                statusFinish: 5,
+            ),
+            BookingBox(
+              date: "11 September 2020",
+              name: "dr. Zara Spk",
+              klinik: "Klinik Jaya Abadi",
+              schedule: "09.00 - 09.30",
+              countDays: "6 days to go",
+              btnText: "See All",
+              statusFinish: 5,
+            ),
+            SizedBox(height: 15),
+            Text(
+              "My Recipe",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
               ),
-              SizedBox(height: 15),
-              Text(
-                "My Recipe",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
+            ),
+            RecipeBox(
+              noRecipe: "KJA-WID-00-210",
+              name: "dr. Zara Spk",
+              klinik: "Klinik Jaya Abadi",
+              schedule: "Berlaku tebus repse : 2",
+              // countDays: "",
+              statusFinish: 5,
+            ),
+            SizedBox(height: 15),
+            Text(
+              "Pembelian Barang",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
               ),
-              RecipeBox(
-                noRecipe: "KJA-WID-00-210",
-                name: "dr. Zara Spk",
-                klinik: "Klinik Jaya Abadi",
-                schedule: "Berlaku tebus repse : 2",
-                // countDays: "",
-                statusFinish: 5,
-              ),
-              SizedBox(height: 15),
-              Text(
-                "Pembelian Barang",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              PembelianBox(
-                date: "11 September 2020",
-                name: "dr. Zara Spk",
-                klinik: "Klinik Jaya Abadi",
-                schedule: "Berlaku tebus repse : 2",
-                btnText: "See All",
-                statusFinish: 5,
-              ),
-            ],
-          ),
+            ),
+            PembelianBox(
+              date: "11 September 2020",
+              name: "dr. Zara Spk",
+              klinik: "Klinik Jaya Abadi",
+              schedule: "Berlaku tebus repse : 2",
+              btnText: "See All",
+              statusFinish: 5,
+            ),
+          ],
         ),
       ),
     );

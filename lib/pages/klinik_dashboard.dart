@@ -8,7 +8,7 @@ class KlinikDashboardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Dermatologist booking"),
+        title: Text("Klinik"),
       ),
       body: Container(
         color: Colors.white,

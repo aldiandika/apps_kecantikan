@@ -91,7 +91,9 @@ class _HomeListIconState extends State<HomeListIcon> {
                     Icons.people,
                     color: Colors.grey,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.toNamed('/klinikDashboard');
+                  },
                   color: Color(0xFFC7ECFA),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(
