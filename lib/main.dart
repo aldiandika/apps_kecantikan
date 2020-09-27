@@ -4,6 +4,7 @@ import 'package:apps_kecantikan/pages/doctor_dashboard_page.dart';
 import 'package:apps_kecantikan/pages/doctor_details.dart';
 import 'package:apps_kecantikan/pages/home_page.dart';
 import 'package:apps_kecantikan/pages/klinik_dashboard.dart';
+import 'package:apps_kecantikan/pages/splashscreen_page.dart';
 import 'package:apps_kecantikan/pages/telemedecine_dashboard.dart';
 import 'package:apps_kecantikan/pages/telemedecine_docter_detail.dart';
 import 'package:apps_kecantikan/widgets/bottom_nav_widget.dart';
@@ -23,8 +24,9 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: '/',
+      initialRoute: '/splash',
       getPages: [
+        GetPage(name: '/splash', page: () => SplashScreenPage()),
         GetPage(name: '/', page: () => BottomNavWidget()),
         GetPage(
             name: '/doctorDashboard',
