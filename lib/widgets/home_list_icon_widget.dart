@@ -35,9 +35,9 @@ class _HomeListIconState extends State<HomeListIcon> {
                 height: 55.0,
                 width: 55.0,
                 child: RaisedButton(
-                  child: Icon(
-                    Icons.phone,
-                    color: Colors.grey,
+                  child: Image.asset(
+                    'assets/icons/activity.png',
+                    color: Colors.white,
                   ),
                   onPressed: () {
                     Get.toNamed('/doctorDashboard');
@@ -71,7 +71,7 @@ class _HomeListIconState extends State<HomeListIcon> {
                 child: RaisedButton(
                   child: Icon(
                     Icons.phone,
-                    color: Colors.grey,
+                    color: Colors.white,
                   ),
                   onPressed: () {
                     Get.toNamed('/telemedicineDashboard');
@@ -132,8 +132,8 @@ class _HomeListIconState extends State<HomeListIcon> {
                 width: 55.0,
                 child: RaisedButton(
                   child: Icon(
-                    Icons.collections_bookmark,
-                    color: Colors.grey,
+                    Icons.calendar_today,
+                    color: Colors.white,
                   ),
                   onPressed: () {},
                   color: Color(0xFFE6BCA8),
@@ -146,7 +146,7 @@ class _HomeListIconState extends State<HomeListIcon> {
               ),
               SizedBox(height: 6.0),
               Text(
-                'MUA',
+                'Care',
                 style: TextStyle(
                   fontSize: 10.0,
                   color: Color(0xFF8D5C4D),
@@ -160,9 +160,9 @@ class _HomeListIconState extends State<HomeListIcon> {
                 height: 55.0,
                 width: 55.0,
                 child: RaisedButton(
-                  child: Icon(
-                    Icons.card_giftcard,
-                    color: Colors.grey,
+                  child: Image.asset(
+                    'assets/icons/heart.png',
+                    color: Colors.white,
                   ),
                   onPressed: () {
                     Navigator.push(

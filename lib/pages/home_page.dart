@@ -40,11 +40,27 @@ class _HomepageState extends State<Homepage> {
                     backgroundColor: Colors.white,
                     maxRadius: 20.0,
                   ),
-                  title: Text(
-                    'Lia Adelia',
-                    style: TextStyle(
-                      fontSize: 18.0,
-                      color: Colors.white,
+                  title: Container(
+                    height: 40.0,
+                    padding: EdgeInsets.symmetric(vertical: 2.0,),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Lia Adelia',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Text(
+                          'Your balance : Rp 30.000.000,-',
+                          style: TextStyle(
+                            fontSize: 9.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   trailing: IconButton(
