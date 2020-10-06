@@ -27,7 +27,7 @@ class _HomeCarouselWidgetState extends State<HomeCarouselWidget> {
                 'Treatment Promo',
                 style: TextStyle(
                   fontSize: 18.0,
-                  color: Color(0xFFFF7583),
+                  color: Color(0xFF986756),
                   fontWeight: FontWeight.w500,
                 ),
               ),
@@ -79,20 +79,19 @@ final List<String> imgList = [
 
 final List<Widget> imageSliders = imgList
     .map((item) => Container(
-  child: Container(
-    margin: EdgeInsets.all(5.0),
-    child: ClipRRect(
-      borderRadius: BorderRadius.all(Radius.circular(5.0)),
-      child: Stack(
-        children: [
-          Image.network(
-            item,
-            fit: BoxFit.cover,
-            width: 1000.0,
+          child: Container(
+            margin: EdgeInsets.all(5.0),
+            child: ClipRRect(
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(12.0),
+                bottomLeft: Radius.circular(12.0),
+              ),
+              child: Image.network(
+                item,
+                fit: BoxFit.cover,
+                width: 1000.0,
+              ),
+            ),
           ),
-        ],
-      ),
-    ),
-  ),
-))
+        ))
     .toList();

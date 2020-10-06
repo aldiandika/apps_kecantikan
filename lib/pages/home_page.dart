@@ -17,35 +17,51 @@ class _HomepageState extends State<Homepage> {
       body: Column(
         children: [
           //appbar
-          Container(
-            color: Color(0xFF25A0DE),
-            height: 100.0,
-            padding: EdgeInsets.all(8.0),
-            alignment: Alignment.bottomCenter,
-            child: ListTile(
-              leading: CircleAvatar(
-                backgroundColor: Colors.white,
-                maxRadius: 20.0,
+          Stack(
+            children: [
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height * 0.13,
+                color: Color(0xFFFFF3F0),
               ),
-              title: Text(
-                'Lia Adelia',
-                style: TextStyle(
-                  fontSize: 18.0,
-                  color: Colors.white,
+              Container(
+                height: 100.0,
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.bottomCenter,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(12.0),
+                    bottomRight: Radius.circular(12.0),
+                  ),
+                  color: Color(0xFF986756),
+                ),
+                child: ListTile(
+                  leading: CircleAvatar(
+                    backgroundColor: Colors.white,
+                    maxRadius: 20.0,
+                  ),
+                  title: Text(
+                    'Lia Adelia',
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                  trailing: IconButton(
+                    icon: Icon(
+                      Icons.notifications,
+                      color: Colors.white,
+                      size: 32.0,
+                    ),
+                    onPressed: () {},
+                  ),
                 ),
               ),
-              trailing: IconButton(
-                icon: Icon(
-                  Icons.notifications,
-                  color: Colors.white,
-                  size: 32.0,
-                ),
-                onPressed: () {},
-              ),
-            ),
+            ],
+            
           ),
-          //body
 
+          //body
           // Icon list
           HomeListIcon(),
           //End of Icon list

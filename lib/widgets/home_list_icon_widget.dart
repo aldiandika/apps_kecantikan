@@ -12,7 +12,20 @@ class _HomeListIconState extends State<HomeListIcon> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(8.0),
+      width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(12.0), bottomRight: Radius.circular(12.0),),
+        color: Color(0xFFFFF3F0),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 1,
+            blurRadius: 12,
+            offset: Offset(0, 10), // changes position of shadow
+          ),
+        ],
+      ),
+      padding: EdgeInsets.only(bottom: 8.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -30,7 +43,7 @@ class _HomeListIconState extends State<HomeListIcon> {
                     Get.toNamed('/doctorDashboard');
                     // Get.toNamed('/klinikDashboard');
                   },
-                  color: Color(0xFFC7ECFA),
+                  color: Color(0xFFE6BCA8),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(8.0),
@@ -38,14 +51,14 @@ class _HomeListIconState extends State<HomeListIcon> {
                   ),
                 ),
 
-                
+
               ),
               SizedBox(height: 6.0),
               Text(
                 'Dermatologist',
                 style: TextStyle(
                   fontSize: 10.0,
-                  color: Colors.grey,
+                  color: Color(0xFF8D5C4D),
                 ),
               ),
             ],
@@ -63,7 +76,7 @@ class _HomeListIconState extends State<HomeListIcon> {
                   onPressed: () {
                     Get.toNamed('/telemedicineDashboard');
                   },
-                  color: Color(0xFFC7ECFA),
+                  color: Color(0xFFE6BCA8),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(8.0),
@@ -76,42 +89,42 @@ class _HomeListIconState extends State<HomeListIcon> {
                 'Telemedicine',
                 style: TextStyle(
                   fontSize: 10.0,
-                  color: Colors.grey,
+                  color: Color(0xFF8D5C4D),
                 ),
               ),
             ],
           ),
-          Column(
-            children: [
-              Container(
-                height: 55.0,
-                width: 55.0,
-                child: RaisedButton(
-                  child: Icon(
-                    Icons.people,
-                    color: Colors.grey,
-                  ),
-                  onPressed: () {
-                    Get.toNamed('/klinikDashboard');
-                  },
-                  color: Color(0xFFC7ECFA),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(8.0),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(height: 6.0),
-              Text(
-                'Care',
-                style: TextStyle(
-                  fontSize: 10.0,
-                  color: Colors.grey,
-                ),
-              ),
-            ],
-          ),
+//          Column(
+//            children: [
+//              Container(
+//                height: 55.0,
+//                width: 55.0,
+//                child: RaisedButton(
+//                  child: Icon(
+//                    Icons.people,
+//                    color: Colors.grey,
+//                  ),
+//                  onPressed: () {
+//                    Get.toNamed('/klinikDashboard');
+//                  },
+//                  color: Color(0xFFC7ECFA),
+//                  shape: RoundedRectangleBorder(
+//                    borderRadius: BorderRadius.all(
+//                      Radius.circular(8.0),
+//                    ),
+//                  ),
+//                ),
+//              ),
+//              SizedBox(height: 6.0),
+//              Text(
+//                'Care',
+//                style: TextStyle(
+//                  fontSize: 10.0,
+//                  color: Colors.grey,
+//                ),
+//              ),
+//            ],
+//          ),
           Column(
             children: [
               Container(
@@ -123,7 +136,7 @@ class _HomeListIconState extends State<HomeListIcon> {
                     color: Colors.grey,
                   ),
                   onPressed: () {},
-                  color: Color(0xFFC7ECFA),
+                  color: Color(0xFFE6BCA8),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(8.0),
@@ -136,7 +149,7 @@ class _HomeListIconState extends State<HomeListIcon> {
                 'MUA',
                 style: TextStyle(
                   fontSize: 10.0,
-                  color: Colors.grey,
+                  color: Color(0xFF8D5C4D),
                 ),
               ),
             ],
@@ -157,7 +170,7 @@ class _HomeListIconState extends State<HomeListIcon> {
                       MaterialPageRoute(builder: (context) => ProductPage()),
                     );
                   },
-                  color: Color(0xFFC7ECFA),
+                  color: Color(0xFFE6BCA8),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(8.0),
@@ -170,7 +183,7 @@ class _HomeListIconState extends State<HomeListIcon> {
                 'Products',
                 style: TextStyle(
                   fontSize: 10.0,
-                  color: Colors.grey,
+                  color: Color(0xFF8D5C4D),
                 ),
               ),
             ],

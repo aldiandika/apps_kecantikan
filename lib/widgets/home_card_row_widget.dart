@@ -23,7 +23,7 @@ class _HomeCardRowState extends State<HomeCardRow> {
               'Popular Dermatologist',
               style: TextStyle(
                 fontSize: 18.0,
-                color: Color(0xFFFF7583),
+                color: Color(0xFF986756),
                 fontWeight: FontWeight.w500,
               ),
             ),
@@ -36,7 +36,7 @@ class _HomeCardRowState extends State<HomeCardRow> {
             crossAxisCount: 3,
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
-            childAspectRatio: (4 / 5),
+            childAspectRatio: (4 / 4.7),
             padding: EdgeInsets.symmetric(horizontal: 4.0, vertical: 8.0),
             children: generateNumbers().map((int i) {
               return CardRow();

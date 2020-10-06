@@ -22,7 +22,7 @@ class _RecommendArticleState extends State<RecommendArticle> {
               'Recommended Articles',
               style: TextStyle(
                 fontSize: 18.0,
-                color: Color(0xFFFF7583),
+                color: Color(0xFF986756),
                 fontWeight: FontWeight.w500,
               ),
             ),
