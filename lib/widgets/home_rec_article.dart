@@ -34,6 +34,7 @@ class _RecommendArticleState extends State<RecommendArticle> {
             children: [
               Container(
                 width: MediaQuery.of(context).size.width * 0.5,
+                height: 205.5,
                 child: Card(
                   elevation: 1.0,
                   shape: RoundedRectangleBorder(
@@ -44,26 +45,30 @@ class _RecommendArticleState extends State<RecommendArticle> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Container(
-//                        height: MediaQuery.of(context).size.height * 0.2,
-//                        height: 100.0,
-                        child: Image.asset(
-                          'assets/images/cleansing.jpg',
-                          fit: BoxFit.cover,
+                      Expanded(
+                        flex: 4,
+                        child: Container(
+                          child: Image.asset(
+                            'assets/images/cleansing.jpg',
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
-                      Container(
-                        padding: EdgeInsets.all(2.0),
-                        margin: EdgeInsets.all(2.0),
-                        child: Text(
-                          '10 Cara agar kulit tetap glowing',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 12.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
+                      Expanded(
+                        flex: 2,
+                        child: Container(
+                          padding: EdgeInsets.all(2.0),
+                          margin: EdgeInsets.all(2.0),
+                          child: Text(
+                            '10 Cara agar kulit tetap glowing',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
+                            overflow: TextOverflow.clip,
                           ),
-                          overflow: TextOverflow.clip,
                         ),
                       ),
                     ],
