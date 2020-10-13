@@ -34,7 +34,7 @@ class _RecommendArticleState extends State<RecommendArticle> {
             children: [
               Container(
                 width: MediaQuery.of(context).size.width * 0.5,
-                height: 205.5,
+                height: 180.0,
                 child: Card(
                   elevation: 1.0,
                   shape: RoundedRectangleBorder(

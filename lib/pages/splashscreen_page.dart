@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:apps_kecantikan/pages/login_page.dart';
 import 'package:apps_kecantikan/widgets/bottom_nav_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +24,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => BottomNavWidget(),
+          builder: (context) => LoginPage(),
         ),
       );
     });

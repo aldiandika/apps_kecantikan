@@ -22,6 +22,7 @@ class _CardRecTreatState extends State<CardRecTreat> {
       ),
       color: Color(0xFFFFEBE5),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           ClipRRect(
             borderRadius: BorderRadius.only(topLeft: Radius.circular(28.0),),

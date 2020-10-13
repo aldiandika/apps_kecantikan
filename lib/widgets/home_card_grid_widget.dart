@@ -35,7 +35,7 @@ class _HomeCardGridState extends State<HomeCardGrid> {
             crossAxisCount: 2,
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
-            childAspectRatio: (3 / 4),
+            childAspectRatio: (2 / 2.9),
             padding: EdgeInsets.symmetric(horizontal: 4.0, vertical: 8.0),
             children: generateNumbers().map((int i) {
               return CardRecTreat();
