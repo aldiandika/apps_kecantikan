@@ -1,3 +1,4 @@
+import 'package:apps_kecantikan/pages/register_page.dart';
 import 'package:apps_kecantikan/widgets/bottom_nav_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -188,7 +189,7 @@ class _LoginPageState extends State<LoginPage> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            BottomNavWidget()),
+                                            RegisterPage()),
                                   );
                                 },
                               ),
