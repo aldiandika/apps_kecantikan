@@ -1,3 +1,4 @@
+import 'package:apps_kecantikan/pages/forgot_password_page.dart';
 import 'package:apps_kecantikan/pages/register_page.dart';
 import 'package:apps_kecantikan/widgets/bottom_nav_widget.dart';
 import 'package:flutter/material.dart';
@@ -104,13 +105,19 @@ class _LoginPageState extends State<LoginPage> {
                               alignment: Alignment.centerRight,
                               child: FlatButton(
                                 child: Text(
-                                  'Forget password ?',
+                                  'Forgot password ?',
                                   style: TextStyle(
                                     color: Color(0xFF986756),
                                   ),
                                 ),
                                 padding: EdgeInsets.all(0.0),
-                                onPressed: () => print('Button pressed'),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => ForgotPassPage()),
+                                  );
+                                },
                               ),
                             ),
                           ],
@@ -188,8 +195,7 @@ class _LoginPageState extends State<LoginPage> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) =>
-                                            RegisterPage()),
+                                        builder: (context) => RegisterPage()),
                                   );
                                 },
                               ),
