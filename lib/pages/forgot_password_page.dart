@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:apps_kecantikan/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +9,15 @@ class ForgotPassPage extends StatefulWidget {
 }
 
 class _ForgotPassPageState extends State<ForgotPassPage> {
+  var isEmailSent = false;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    isEmailSent = false;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,49 +82,58 @@ class _ForgotPassPageState extends State<ForgotPassPage> {
                     borderRadius: BorderRadius.all(Radius.circular(12.0)),
                   ),
                   onPressed: () {
-                    showModalBottomSheet(
-                        context: context,
-                        builder: (context) {
-                          return Container(
-                            constraints: BoxConstraints(maxHeight: 120.0),
-                            padding: EdgeInsets.all(8.0),
-                            color: Color(0xFFFFF3F0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Text(
-                                  'Link untuk mereset password sudah dikirimkan ke email kamu',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w700,
-                                    color: Colors.black54,
+                    // Dummy
+                    isEmailSent = true;
+
+                    if (!isEmailSent) {
+                      print('Problem Sending to Email');
+                    } else {
+                      showModalBottomSheet(
+                          context: context,
+                          builder: (context) {
+                            return Container(
+                              constraints: BoxConstraints(maxHeight: 120.0),
+                              padding: EdgeInsets.all(8.0),
+                              color: Color(0xFFFFF3F0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Link untuk mereset password sudah dikirimkan ke email kamu',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w700,
+                                      color: Colors.black54,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                    overflow: TextOverflow.clip,
                                   ),
-                                  textAlign: TextAlign.center,
-                                  overflow: TextOverflow.clip,
-                                ),
-                                SizedBox(
-                                  height: 20.0,
-                                ),
-                                RaisedButton(
-                                  child: Text('ok'),
-                                  color: Color(0xFF986756),
-                                  textColor: Colors.white,
-                                  elevation: 3.0,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(12.0)),
+                                  SizedBox(
+                                    height: 20.0,
                                   ),
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => LoginPage()),
-                                    );
-                                  },
-                                ),
-                              ],
-                            ),
-                          );
-                        });
+                                  RaisedButton(
+                                    child: Text('ok'),
+                                    color: Color(0xFF986756),
+                                    textColor: Colors.white,
+                                    elevation: 3.0,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(12.0)),
+                                    ),
+                                    onPressed: () {
+                                      Navigator.of(context).popUntil((route) => route.isFirst);
+                                      Navigator.pushReplacement(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => LoginPage(),
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ),
+                            );
+                          });
+                    }
                   },
                 ),
               ),
