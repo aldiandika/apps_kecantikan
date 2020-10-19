@@ -3,6 +3,8 @@ import 'package:apps_kecantikan/widgets/search_filter.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'mybooking_dermatologist_detail_page.dart';
+
 class MyBookingDermatologist extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -27,6 +29,13 @@ class MyBookingDermatologist extends StatelessWidget {
                   schedule: "09.00 - 09.30",
                   countDays: "6 days to go",
                   statusFinish: 0,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => DermatologistBookingDetail()),
+                    );
+                  },
                 ),
                 SizedBox(height: 10),
                 BookingBox(
@@ -36,6 +45,13 @@ class MyBookingDermatologist extends StatelessWidget {
                   schedule: "09.00 - 09.30",
                   countDays: "6 days to go",
                   statusFinish: 1,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => DermatologistBookingDetail()),
+                    );
+                  },
                 ),
                 SizedBox(height: 10),
                 BookingBox(
@@ -45,6 +61,13 @@ class MyBookingDermatologist extends StatelessWidget {
                   schedule: "09.00 - 09.30",
                   countDays: "6 days to go",
                   statusFinish: 2,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => DermatologistBookingDetail()),
+                    );
+                  },
                 ),
               ],
             ),

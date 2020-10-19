@@ -82,7 +82,7 @@ class BookingTelemedecineMenu extends StatelessWidget {
                     SizedBox(height: 15),
                     Container(
                       width: widthScreen,
-                      height: 175,
+                      height: 195,
                       padding: EdgeInsets.symmetric(
                         horizontal: 15,
                       ),

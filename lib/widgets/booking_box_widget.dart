@@ -11,6 +11,7 @@ class BookingBox extends StatelessWidget {
   final String schedule;
   final int statusFinish;
   final String btnText;
+  final Function onTap;
 
   const BookingBox({
     Key key,
@@ -21,6 +22,7 @@ class BookingBox extends StatelessWidget {
     this.schedule = "",
     this.statusFinish = 0,
     this.btnText = "Details",
+    this.onTap,
   }) : super(key: key);
 
   @override
@@ -181,7 +183,7 @@ class BookingBox extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
             border: Border.all(
-              width: 2,
+              width: 1,
               color: Color(0xffD6D6D6),
             ),
             borderRadius: BorderRadius.only(
@@ -218,14 +220,7 @@ class BookingBox extends StatelessWidget {
                   ),
                 ),
               ),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => BottomNavWidget(tabIndex: 1,),
-                  ),
-                );
-              },
+              onTap: onTap,
             ),
           ),
         ),

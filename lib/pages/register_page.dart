@@ -1,4 +1,5 @@
 import 'package:apps_kecantikan/pages/login_page.dart';
+import 'package:apps_kecantikan/pages/registration_biodata_page.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -162,8 +163,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => LoginPage()),
+                      MaterialPageRoute(builder: (context) => LoginPage()),
                     );
                   },
                 ),

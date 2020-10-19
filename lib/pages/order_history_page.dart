@@ -60,9 +60,7 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
           padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
           child: Column(
             children: [
-              SearchFilterWidget(
-                defHintText: 'Cari',
-              ),
+              SearchFilterWidget(),
               Container(
                 padding: EdgeInsets.symmetric(
                   vertical: 8.0,

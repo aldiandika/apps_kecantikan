@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SearchFilterWidget extends StatelessWidget {
-  final String defHintText;
-  SearchFilterWidget({
-    Key key,
-    this.defHintText = "Cari Dokter",
-  }) : super(key: key);
-
   double heightScreen = Get.height;
   double widthScreen = Get.width;
+
+  final String hintText;
+
+  SearchFilterWidget({Key key, this.hintText = "Cari Dokter"}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,10 +34,10 @@ class SearchFilterWidget extends StatelessWidget {
                 // controller: passwordController,
                 cursorColor: Color(0xff659E8D),
                 decoration: InputDecoration(
-                    hintText: defHintText,
+                    hintText: hintText,
                     border: InputBorder.none,
                     suffixIcon:
-                        IconButton(icon: Icon(Icons.search), onPressed: () {})),
+                    IconButton(icon: Icon(Icons.search), onPressed: () {})),
               ),
             ),
             IconButton(

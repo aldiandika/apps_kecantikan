@@ -1,4 +1,6 @@
+import 'package:apps_kecantikan/pages/care_dashboard_page.dart';
 import 'package:apps_kecantikan/pages/cart_page.dart';
+import 'package:apps_kecantikan/pages/klinik_dashboard.dart';
 import 'package:apps_kecantikan/pages/product_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,7 +16,10 @@ class _HomeListIconState extends State<HomeListIcon> {
     return Container(
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(12.0), bottomRight: Radius.circular(12.0),),
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(12.0),
+          bottomRight: Radius.circular(12.0),
+        ),
         color: Color(0xFFFFF3F0),
         boxShadow: [
           BoxShadow(
@@ -50,8 +55,6 @@ class _HomeListIconState extends State<HomeListIcon> {
                     ),
                   ),
                 ),
-
-
               ),
               SizedBox(height: 6.0),
               Text(
@@ -135,7 +138,13 @@ class _HomeListIconState extends State<HomeListIcon> {
                     Icons.calendar_today,
                     color: Colors.white,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => CareDashboardPage()),
+                    );
+                  },
                   color: Color(0xFFE6BCA8),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(
