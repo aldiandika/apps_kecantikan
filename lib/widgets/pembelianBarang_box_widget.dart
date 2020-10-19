@@ -1,3 +1,4 @@
+import 'package:apps_kecantikan/pages/order_history_page.dart';
 import 'package:apps_kecantikan/widgets/button_Booking_widget.dart';
 import 'package:apps_kecantikan/widgets/search_filter.dart';
 import 'package:flutter/material.dart';
@@ -163,7 +164,11 @@ class PembelianBox extends StatelessWidget {
                   ),
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) => OrderHistoryPage(),
+                ));
+              },
             ),
           ),
         ),

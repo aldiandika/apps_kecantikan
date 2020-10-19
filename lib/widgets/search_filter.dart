@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SearchFilterWidget extends StatelessWidget {
+  final String defHintText;
+  SearchFilterWidget({
+    Key key,
+    this.defHintText = "Cari Dokter",
+  }) : super(key: key);
+
   double heightScreen = Get.height;
   double widthScreen = Get.width;
 
@@ -30,7 +36,7 @@ class SearchFilterWidget extends StatelessWidget {
                 // controller: passwordController,
                 cursorColor: Color(0xff659E8D),
                 decoration: InputDecoration(
-                    hintText: "Cari Dokter",
+                    hintText: defHintText,
                     border: InputBorder.none,
                     suffixIcon:
                         IconButton(icon: Icon(Icons.search), onPressed: () {})),
