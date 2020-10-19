@@ -5,6 +5,10 @@ class SearchFilterWidget extends StatelessWidget {
   double heightScreen = Get.height;
   double widthScreen = Get.width;
 
+  final String hintText;
+
+  SearchFilterWidget({Key key, this.hintText = "Cari Dokter"}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,7 +34,7 @@ class SearchFilterWidget extends StatelessWidget {
                 // controller: passwordController,
                 cursorColor: Color(0xff659E8D),
                 decoration: InputDecoration(
-                    hintText: "Cari Dokter",
+                    hintText: hintText,
                     border: InputBorder.none,
                     suffixIcon:
                         IconButton(icon: Icon(Icons.search), onPressed: () {})),

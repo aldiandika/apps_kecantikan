@@ -5,6 +5,7 @@ import 'package:apps_kecantikan/pages/doctor_details.dart';
 import 'package:apps_kecantikan/pages/home_page.dart';
 import 'package:apps_kecantikan/pages/klinik_dashboard.dart';
 import 'package:apps_kecantikan/pages/login_page.dart';
+import 'package:apps_kecantikan/pages/registration_biodata_page.dart';
 import 'package:apps_kecantikan/pages/splashscreen_page.dart';
 import 'package:apps_kecantikan/pages/telemedecine_dashboard.dart';
 import 'package:apps_kecantikan/pages/telemedecine_docter_detail.dart';
@@ -28,37 +29,40 @@ class _MyAppState extends State<MyApp> {
       initialRoute: '/splash',
       getPages: [
         GetPage(name: '/splash', page: () => SplashScreenPage()),
-        GetPage(name: '/login', page: ()=> LoginPage()),
+        GetPage(name: '/login', page: () => LoginPage()),
         GetPage(name: '/', page: () => BottomNavWidget()),
         GetPage(
-            name: '/doctorDashboard',
-            page: () => DoctorDashboardPage(),
-            transition: Transition.zoom),
+          name: '/doctorDashboard',
+          page: () => DoctorDashboardPage(),
+        ),
         GetPage(
-            name: '/doctorDetails',
-            page: () => DoctorDetails(),
-            transition: Transition.zoom),
+          name: '/doctorDetails',
+          page: () => DoctorDetails(),
+        ),
         GetPage(
-            name: '/bookingMenu',
-            page: () => BookingMenu(),
-            transition: Transition.leftToRightWithFade),
+          name: '/bookingMenu',
+          page: () => BookingMenu(),
+        ),
         GetPage(
-            name: '/telemedicineDashboard',
-            page: () => TelemedecineDashboardPage(),
-            transition: Transition.zoom),
+          name: '/telemedicineDashboard',
+          page: () => TelemedecineDashboardPage(),
+        ),
         GetPage(
-            name: '/TelemedicineDoctorDetails',
-            page: () => TelemedicineDoctorDetails(),
-            transition: Transition.zoom),
+          name: '/TelemedicineDoctorDetails',
+          page: () => TelemedicineDoctorDetails(),
+        ),
         GetPage(
-            name: '/bookingTelemedicineMenu',
-            page: () => BookingTelemedecineMenu(),
-            transition: Transition.zoom),
+          name: '/bookingTelemedicineMenu',
+          page: () => BookingTelemedecineMenu(),
+        ),
         GetPage(
-            name: '/klinikDashboard',
-            page: () => KlinikDashboardPage(),
-            transition: Transition.zoom),
-        
+          name: '/klinikDashboard',
+          page: () => KlinikDashboardPage(),
+        ),
+        GetPage(
+          name: '/registration_biodata',
+          page: () => RegistrationBiodata(),
+        ),
       ],
     );
   }

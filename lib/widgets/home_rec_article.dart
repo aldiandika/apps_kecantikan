@@ -1,3 +1,4 @@
+import 'package:apps_kecantikan/pages/article_dashboard_page.dart';
 import 'package:flutter/material.dart';
 
 class RecommendArticle extends StatefulWidget {
@@ -141,7 +142,12 @@ class _RecommendArticleState extends State<RecommendArticle> {
               ),
             ),
             padding: EdgeInsets.all(0.0),
-            onPressed: () => print('Button pressed'),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ArticleDashboard()),
+              );
+            },
           ),
         ),
       ],
