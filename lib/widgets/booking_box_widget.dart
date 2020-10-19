@@ -181,7 +181,7 @@ class BookingBox extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
             border: Border.all(
-              width: 2,
+              width: 1,
               color: Color(0xffD6D6D6),
             ),
             borderRadius: BorderRadius.only(
@@ -222,7 +222,9 @@ class BookingBox extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => BottomNavWidget(tabIndex: 1,),
+                    builder: (context) => BottomNavWidget(
+                      tabIndex: 1,
+                    ),
                   ),
                 );
               },

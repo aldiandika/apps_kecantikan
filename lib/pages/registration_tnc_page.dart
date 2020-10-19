@@ -1,3 +1,4 @@
+import 'package:apps_kecantikan/widgets/bottom_nav_widget.dart';
 import 'package:apps_kecantikan/widgets/inputData_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -186,7 +187,8 @@ class _RegistrationTermAndConditionState
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Homepage()),
+                      MaterialPageRoute(
+                          builder: (context) => BottomNavWidget()),
                     );
                   },
                 ),

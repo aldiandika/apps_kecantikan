@@ -42,7 +42,9 @@ class _HomepageState extends State<Homepage> {
                   ),
                   title: Container(
                     height: 40.0,
-                    padding: EdgeInsets.symmetric(vertical: 2.0,),
+                    padding: EdgeInsets.symmetric(
+                      vertical: 2.0,
+                    ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -74,7 +76,6 @@ class _HomepageState extends State<Homepage> {
                 ),
               ),
             ],
-            
           ),
 
           //body
