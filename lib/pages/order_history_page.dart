@@ -1,4 +1,8 @@
 import 'package:apps_kecantikan/widgets/order_all_widget.dart';
+import 'package:apps_kecantikan/widgets/order_cancel_widget.dart';
+import 'package:apps_kecantikan/widgets/order_done_widget.dart';
+import 'package:apps_kecantikan/widgets/order_sent_widget.dart';
+import 'package:apps_kecantikan/widgets/order_unpaid_widget.dart';
 import 'package:apps_kecantikan/widgets/search_filter.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -32,6 +36,10 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
 
     final childWidget = <Widget>[
       OrderAllWidget(),
+      OrderUnpaidWidget(),
+      OrderDoneWidget(),
+      OrderSentWidget(),
+      OrderCancelWidget(),
     ];
 
     return MaterialApp(

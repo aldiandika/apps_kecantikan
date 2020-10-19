@@ -1,0 +1,30 @@
+import 'package:flutter/material.dart';
+
+import 'order_box_widget.dart';
+
+class OrderDoneWidget extends StatefulWidget {
+  @override
+  _OrderDoneWidgetState createState() => _OrderDoneWidgetState();
+}
+
+class _OrderDoneWidgetState extends State<OrderDoneWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 12.0,),
+      child: ListView(
+        scrollDirection: Axis.vertical,
+        children: [
+          OrderBox(
+            date: "11 September 2020",
+            status: 1,
+            invoiceNumber: "KC/OR/003-02120",
+            storeName: "Klinik Jaya Abadi",
+            bill: 'Rp 255.000,00',
+          ),
+          SizedBox(height: 10),
+        ],
+      ),
+    );
+  }
+}

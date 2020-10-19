@@ -20,6 +20,8 @@ class _OrderAllWidgetState extends State<OrderAllWidget> {
             status: 1,
             invoiceNumber: "KC/OR/001-02120",
             storeName: "Klinik Jaya Abadi",
+            bill: 'Rp 255.000,00',
+            withRecipe: true,
           ),
           SizedBox(height: 10),
           OrderBox(
@@ -27,6 +29,7 @@ class _OrderAllWidgetState extends State<OrderAllWidget> {
             status: 2,
             invoiceNumber: "KC/OR/002-02120",
             storeName: "Klinik Jaya Abadi",
+            bill: 'Rp 255.000,00',
           ),
           SizedBox(height: 10),
           OrderBox(
@@ -34,6 +37,7 @@ class _OrderAllWidgetState extends State<OrderAllWidget> {
             status: 3,
             invoiceNumber: "KC/OR/003-02120",
             storeName: "Klinik Jaya Abadi",
+            bill: 'Rp 255.000,00',
           ),
           SizedBox(height: 10),
           OrderBox(
@@ -41,6 +45,7 @@ class _OrderAllWidgetState extends State<OrderAllWidget> {
             status: 4,
             invoiceNumber: "KC/OR/004-02120",
             storeName: "Klinik Jaya Abadi",
+            bill: 'Rp 255.000,00',
           ),
 
         ],

@@ -125,6 +125,15 @@ class _OrderBoxState extends State<OrderBox> {
                     ],
                   ),
                   SizedBox(height: 12),
+                  widget.withRecipe ? Text(
+                    'Dengan resep dokter',
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ) : Container(),
+                  SizedBox(height: 12),
                   Text(
                     widget.storeName,
                     style: TextStyle(
@@ -251,7 +260,7 @@ class _OrderBoxState extends State<OrderBox> {
                           child: Container(
                             alignment: Alignment.centerRight,
                             child: Text(
-                              'Rp 255.000,00',
+                              widget.bill,
                               style: TextStyle(
                                 color: Colors.black45,
                                 fontSize: 12,
