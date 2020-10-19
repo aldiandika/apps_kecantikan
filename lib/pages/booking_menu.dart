@@ -81,7 +81,7 @@ class BookingMenu extends StatelessWidget {
                     SizedBox(height: 15),
                     Container(
                       width: widthScreen,
-                      height: 175,
+                      height: 190,
                       padding: EdgeInsets.symmetric(
                         horizontal: 15,
                       ),
