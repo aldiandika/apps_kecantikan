@@ -1,3 +1,4 @@
+import 'package:apps_kecantikan/pages/recipe_dashboard_page.dart';
 import 'package:apps_kecantikan/widgets/subwidget_card_pop_derm.dart';
 import 'package:flutter/material.dart';
 
@@ -53,7 +54,12 @@ class _HomeCardRowState extends State<HomeCardRow> {
               ),
             ),
             padding: EdgeInsets.all(0.0),
-            onPressed: () => print('Button pressed'),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => RecipePage()),
+              );
+            },
           ),
         ),
       ],
