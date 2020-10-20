@@ -1,3 +1,4 @@
+import 'package:apps_kecantikan/pages/order_detail_page.dart';
 import 'package:flutter/material.dart';
 
 import 'button_Booking_widget.dart';
@@ -317,6 +318,11 @@ class _OrderBoxState extends State<OrderBox> {
                   ),
                 ),
                 onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => OrderDetail()),
+                  );
                 },
               ),
             ),
