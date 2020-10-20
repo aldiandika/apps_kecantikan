@@ -1,7 +1,10 @@
 import 'package:apps_kecantikan/data/listproduct_dummy.dart';
 import 'package:apps_kecantikan/pages/cart_page.dart';
+import 'package:apps_kecantikan/pages/order_status_page.dart';
 import 'package:apps_kecantikan/widgets/order_card_product_widget.dart';
 import 'package:flutter/material.dart';
+
+import 'recipe_dashboard_page.dart';
 
 class OrderDetail extends StatefulWidget {
   @override
@@ -105,7 +108,13 @@ class _OrderDetailState extends State<OrderDetail> {
                                     constraints:
                                         BoxConstraints(maxHeight: 20.0),
                                     child: FlatButton(
-                                      onPressed: () => print('lihat invoice'),
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => RecipePage()),
+                                        );
+                                      },
                                       child: Text(
                                         'lihat',
                                         style: TextStyle(
@@ -186,7 +195,13 @@ class _OrderDetailState extends State<OrderDetail> {
                               child: ConstrainedBox(
                                 constraints: BoxConstraints(maxHeight: 20.0),
                                 child: FlatButton(
-                                  onPressed: () => print('lihat resi'),
+                                  onPressed: (){
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => OrderStatusPage()),
+                                    );
+                                  },
                                   child: Text(
                                     'lihat',
                                     style: TextStyle(

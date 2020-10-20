@@ -1,3 +1,4 @@
+import 'package:apps_kecantikan/pages/cart_page.dart';
 import 'package:apps_kecantikan/widgets/button_Booking_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -289,6 +290,13 @@ class RecipeDetail extends StatelessWidget {
                   fontSize: 16,
                   txtColor: Colors.white,
                   bgnColor: Colors.blue,
+                  onPressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => CartPage()),
+                    );
+                  },
                 ),
               ),
             ],
