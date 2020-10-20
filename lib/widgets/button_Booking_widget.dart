@@ -6,6 +6,7 @@ class ButtonBooking extends StatelessWidget {
   final Color bgnColor;
   final Function onPressed;
   final double width;
+  final double height;
   final double fontSize;
 
   const ButtonBooking({
@@ -15,6 +16,7 @@ class ButtonBooking extends StatelessWidget {
     this.bgnColor = Colors.white,
     this.onPressed,
     this.width = 85,
+    this.height = 25,
     this.fontSize,
   }) : super(key: key);
 
@@ -22,7 +24,7 @@ class ButtonBooking extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: width,
-      height: 25,
+      height: height,
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
