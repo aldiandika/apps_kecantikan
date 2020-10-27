@@ -68,6 +68,7 @@ class BookingBox extends StatelessWidget {
                                 fontSize: 10,
                                 txtColor: Colors.white,
                                 bgnColor: Colors.blue,
+                                width: 65,
                               )
                             : statusFinish == 2
                                 ? ButtonBooking(
@@ -75,6 +76,7 @@ class BookingBox extends StatelessWidget {
                                     fontSize: 10,
                                     txtColor: Colors.white,
                                     bgnColor: Colors.red,
+                                    width: 65,
                                   )
                                 : statusFinish == 3
                                     ? Text(

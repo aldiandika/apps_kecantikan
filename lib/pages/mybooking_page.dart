@@ -19,7 +19,8 @@ class _MybookingPageState extends State<MybookingPage> {
     double widthScreen = Get.width;
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("My Booking")),
+        title: Text("My Booking"),
+        centerTitle: true,
       ),
       body: Container(
         height: heightScreen,
@@ -31,71 +32,84 @@ class _MybookingPageState extends State<MybookingPage> {
             Container(
               // padding: EdgeInsets.all(10),
               child: Row(
+
                 children: [
-                  Container(
-                    height: 30,
-                    decoration: BoxDecoration(
-                      color: index == 0 ? Colors.blue : Colors.white,
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    child: MaterialButton(
-                      child: Text(
-                        "Dermatologist",
-                        style: TextStyle(
-                          color: index == 0 ? Colors.white : Colors.blue,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                        ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      height: 30,
+                      decoration: BoxDecoration(
+                        color: index == 0 ? Colors.blue : Colors.white,
+                        borderRadius: BorderRadius.circular(30),
                       ),
-                      onPressed: () {
-                        setState(() {
-                          index = 0;
-                        });
-                      },
+                      child: MaterialButton(
+                        child: Text(
+                          "Dermatologist",
+                          style: TextStyle(
+                            color: index == 0 ? Colors.white : Colors.blue,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 12,
+                          ),
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            index = 0;
+                          });
+                        },
+                      ),
                     ),
                   ),
-                  Container(
-                    height: 30,
-                    decoration: BoxDecoration(
-                      color: index == 1 ? Colors.blue : Colors.white,
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    child: MaterialButton(
-                      child: Text(
-                        "Telemedicine",
-                        style: TextStyle(
-                          color: index == 1 ? Colors.white : Colors.blue,
-                          fontWeight: FontWeight.bold,
-                        ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      height: 30,
+                      decoration: BoxDecoration(
+                        color: index == 1 ? Colors.blue : Colors.white,
+                        borderRadius: BorderRadius.circular(30),
                       ),
-                      onPressed: () {
-                        setState(() {
-                          index = 1;
-                        });
-                      },
+                      child: MaterialButton(
+                        child: Text(
+                          "Telemedicine",
+                          style: TextStyle(
+                            color: index == 1 ? Colors.white : Colors.blue,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 12,
+                          ),
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            index = 1;
+                          });
+                        },
+                      ),
                     ),
                   ),
-                  Container(
-                    height: 30,
-                    decoration: BoxDecoration(
-                      color: index == 2 ? Colors.blue : Colors.white,
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    child: MaterialButton(
-                      child: Text(
-                        "Care",
-                        style: TextStyle(
-                          color: index == 2 ? Colors.white : Colors.blue,
-                          fontWeight: FontWeight.bold,
-                        ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      height: 30,
+                      decoration: BoxDecoration(
+                        color: index == 2 ? Colors.blue : Colors.white,
+                        borderRadius: BorderRadius.circular(30),
                       ),
-                      onPressed: () {
-                        setState(() {
-                          index = 2;
-                        });
-                      },
+                      child: MaterialButton(
+                        child: Text(
+                          "Care",
+                          style: TextStyle(
+                            color: index == 2 ? Colors.white : Colors.blue,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 12,
+                          ),
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            index = 2;
+                          });
+                        },
+                      ),
                     ),
                   ),
+
                 ],
               ),
             ),

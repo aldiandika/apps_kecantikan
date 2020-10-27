@@ -5,6 +5,8 @@ import 'package:apps_kecantikan/widgets/profile_header.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'mybooking_page.dart';
+
 class ProfilePage extends StatefulWidget {
   @override
   _ProfilePageState createState() => _ProfilePageState();
@@ -43,6 +45,11 @@ class _ProfilePageState extends State<ProfilePage> {
               countDays: "6 days to go",
               btnText: "See All",
               statusFinish: 5,
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) => MybookingPage(),
+                ));
+              },
             ),
             SizedBox(height: 15),
             Text(
@@ -72,7 +79,7 @@ class _ProfilePageState extends State<ProfilePage> {
               date: "11 September 2020",
               name: "dr. Zara Spk",
               klinik: "Klinik Jaya Abadi",
-              schedule: "Berlaku tebus repse : 2",
+              schedule: "Berlaku tebus resep : 2",
               btnText: "See All",
               statusFinish: 5,
             ),

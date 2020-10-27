@@ -23,8 +23,8 @@ class ButtonBooking extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: width,
       height: height,
+      width: width,
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
