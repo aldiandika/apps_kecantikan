@@ -54,7 +54,7 @@ class _OrderBoxState extends State<OrderBox> {
                   Row(
                     children: [
                       Expanded(
-                        flex: 4,
+                        flex: 7,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -76,7 +76,7 @@ class _OrderBoxState extends State<OrderBox> {
                         ),
                       ),
                       Expanded(
-                        flex: 1,
+                        flex: 2,
                         child: Container(
                           alignment: Alignment.topRight,
                           child: widget.status == 1

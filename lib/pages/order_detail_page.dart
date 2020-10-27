@@ -1,10 +1,9 @@
 import 'package:apps_kecantikan/data/listproduct_dummy.dart';
 import 'package:apps_kecantikan/pages/cart_page.dart';
 import 'package:apps_kecantikan/pages/order_status_page.dart';
+import 'package:apps_kecantikan/pages/recipe_detail_page.dart';
 import 'package:apps_kecantikan/widgets/order_card_product_widget.dart';
 import 'package:flutter/material.dart';
-
-import 'recipe_dashboard_page.dart';
 
 class OrderDetail extends StatefulWidget {
   @override
@@ -112,7 +111,7 @@ class _OrderDetailState extends State<OrderDetail> {
                                         Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                              builder: (context) => RecipePage()),
+                                              builder: (context) => RecipeDetail()),
                                         );
                                       },
                                       child: Text(
