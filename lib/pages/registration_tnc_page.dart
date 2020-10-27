@@ -153,18 +153,25 @@ class _RegistrationTermAndConditionState
               Container(
                   child: Row(
                 children: [
-                  Checkbox(
-                    value: checked,
-                    onChanged: (bool value) {
-                      setState(() {
-                        checked = value;
-                      });
-                    },
+                  Expanded(
+                    flex: 1,
+                    child: Checkbox(
+                      value: checked,
+                      onChanged: (bool value) {
+                        setState(() {
+                          checked = value;
+                        });
+                      },
+                    ),
                   ),
-                  Text(
-                    "I have read and agree to the Terms Service",
-                    style: TextStyle(
-                      fontSize: 14,
+                  Expanded(
+                    flex: 9,
+                    child: Text(
+                      "I have read and agree to the Terms Service",
+                      style: TextStyle(
+                        fontSize: 14,
+                      ),
+                      overflow: TextOverflow.clip,
                     ),
                   ),
                 ],
@@ -185,7 +192,7 @@ class _RegistrationTermAndConditionState
                     borderRadius: BorderRadius.all(Radius.circular(12.0)),
                   ),
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                           builder: (context) => BottomNavWidget()),

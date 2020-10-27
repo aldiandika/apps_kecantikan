@@ -29,8 +29,8 @@ class _MyAppState extends State<MyApp> {
       initialRoute: '/splash',
       getPages: [
         GetPage(name: '/splash', page: () => SplashScreenPage()),
-        GetPage(name: '/login', page: () => LoginPage()),
         GetPage(name: '/', page: () => BottomNavWidget()),
+        GetPage(name: '/login', page: () => LoginPage()),
         GetPage(
           name: '/doctorDashboard',
           page: () => DoctorDashboardPage(),

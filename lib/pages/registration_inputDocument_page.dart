@@ -173,7 +173,7 @@ class RegistrationInputDocument extends StatelessWidget {
                     borderRadius: BorderRadius.all(Radius.circular(12.0)),
                   ),
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                           builder: (context) => RegistrationTermAndCondition()),

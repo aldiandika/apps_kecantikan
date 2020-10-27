@@ -54,6 +54,14 @@ class DoctorDetails extends StatelessWidget {
                     ],
                   ),
                   Text(
+                    "No. izin praktek : 121.21.232.213",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xffB6AAAA),
+                    ),
+                  ),
+                  Text(
                     "Bandung",
                     style: TextStyle(
                       fontSize: 16,
