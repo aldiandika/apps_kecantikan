@@ -11,10 +11,10 @@ class DoctorDetails extends StatelessWidget {
     return Scaffold(
       body: Container(
         color: Color(0xffF5F5F5),
+        padding: EdgeInsets.symmetric(vertical: 60.0),
         child: Center(
           child: Container(
             width: widthScreen,
-            height: heightScreen * 0.7,
             margin: EdgeInsets.symmetric(horizontal: 15),
             decoration: BoxDecoration(
               color: Colors.white,
