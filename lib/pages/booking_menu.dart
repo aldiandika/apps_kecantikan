@@ -10,16 +10,16 @@ class BookingMenu extends StatelessWidget {
     double widthScreen = Get.width;
     return Scaffold(
       body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: 15, vertical: 60.0),
         child: Container(
           color: Color(0xffF5F5F5),
+          height: MediaQuery.of(context).size.height,
+          padding: EdgeInsets.symmetric(horizontal: 15, vertical: 60.0),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
                   width: widthScreen,
-//                height: heightScreen * 0.14,
                   padding: EdgeInsets.all(15),
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -63,7 +63,6 @@ class BookingMenu extends StatelessWidget {
                 SizedBox(height: 30),
                 Container(
                   width: widthScreen,
-//                height: heightScreen * 0.4,
                   padding: EdgeInsets.symmetric(vertical: 15, horizontal: 4.0),
                   decoration: BoxDecoration(
                     color: Color(0xffF5F5F5),
@@ -109,7 +108,7 @@ class BookingMenu extends StatelessWidget {
                               FormBooking(
                                 text: "Catatan",
                                 isMultiLines: true,
-                                numberOfLines: 3,
+                                numberOfLines: null,
                               ),
                             ],
                           ),
