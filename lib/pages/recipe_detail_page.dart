@@ -13,6 +13,7 @@ class RecipeDetail extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Recipe Detail"),
+        centerTitle: true,
       ),
       body: Center(
         child: Container(
@@ -41,7 +42,7 @@ class RecipeDetail extends StatelessWidget {
                 padding: EdgeInsets.symmetric(
                   horizontal: 15,
                 ),
-                child: Text("No. Booking : 210/212/za/110920",
+                child: Text("No. Resep : 210/212/za/110920",
                     style: TextStyle(fontWeight: FontWeight.w500)),
               ),
               Divider(
