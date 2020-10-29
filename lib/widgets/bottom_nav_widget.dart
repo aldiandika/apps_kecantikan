@@ -2,6 +2,7 @@ import 'package:apps_kecantikan/pages/home_page.dart';
 import 'package:apps_kecantikan/pages/inbox_page.dart';
 import 'package:apps_kecantikan/pages/mybooking_page.dart';
 import 'package:apps_kecantikan/pages/profile_page.dart';
+import 'package:double_back_to_close_app/double_back_to_close_app.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavWidget extends StatefulWidget {
@@ -18,9 +19,9 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
 
   @override
   void initState() {
-    if(widget.tabIndex != null){
+    if (widget.tabIndex != null) {
       _selectedTabIndex = widget.tabIndex;
-    }else{
+    } else {
       _selectedTabIndex = 0;
     }
     super.initState();
@@ -95,7 +96,12 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
 
     return MaterialApp(
       home: Scaffold(
-        body: listPage[_selectedTabIndex],
+        body: DoubleBackToCloseApp(
+          child: listPage[_selectedTabIndex],
+          snackBar: const SnackBar(
+            content: Text('Tap back again to leave'),
+          ),
+        ),
         bottomNavigationBar: _bottomNavBar,
       ),
     );
