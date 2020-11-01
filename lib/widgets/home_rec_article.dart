@@ -78,55 +78,45 @@ class _RecommendArticleState extends State<RecommendArticle> {
               ),
               Container(
                 width: MediaQuery.of(context).size.width * 0.5,
-                child: GridView.count(
-                  crossAxisCount: 2,
-                  shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                  childAspectRatio: (1 / 1),
-                  padding: EdgeInsets.only(
-                    top: 0.0,
-                    bottom: 0.0,
-                    right: 1.0,
-                    left: 1.0,
+                height: 180.0,
+                child: Card(
+                  elevation: 1.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(8.0),
+                    ),
                   ),
-                  children: generateNumbers().map((int i) {
-                    return Container(
-                      child: Card(
-                        elevation: 1.0,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(4.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        flex: 4,
+                        child: Container(
+                          child: Image.asset(
+                            'assets/images/cleansing.jpg',
+                            fit: BoxFit.cover,
                           ),
                         ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              height: MediaQuery.of(context).size.height * 0.07,
-                              child: Image.asset(
-                                'assets/images/cleansing.jpg',
-                                fit: BoxFit.cover,
-                              ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: Container(
+                          padding: EdgeInsets.all(2.0),
+                          margin: EdgeInsets.all(2.0),
+                          child: Text(
+                            '10 Cara agar kulit tetap glowing',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
                             ),
-                            Container(
-                              padding: EdgeInsets.all(1.0),
-                              margin: EdgeInsets.all(1.0),
-                              child: Text(
-                                'Mencegah penuaan dini',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontSize: 8.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black54,
-                                ),
-                                overflow: TextOverflow.clip,
-                              ),
-                            ),
-                          ],
+                            overflow: TextOverflow.clip,
+                          ),
                         ),
                       ),
-                    );
-                  }).toList(),
+                    ],
+                  ),
                 ),
               ),
             ],
