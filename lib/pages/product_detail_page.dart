@@ -16,6 +16,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
         appBar: AppBar(
           title: Text('Product Detail'),
           backgroundColor: Color(0xFF986756),
+          centerTitle: true,
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
