@@ -109,7 +109,7 @@ class _CardOrderProductState extends State<CardOrderProduct> {
                           widget.withRecipe ? Text(
                             'Dengan resep dokter',
                             style: TextStyle(
-                              color: Colors.blue,
+                              color: Color(0xFF986756),
                               fontWeight: FontWeight.w300,
                               fontSize: 10.0,
                             ),
@@ -184,7 +184,7 @@ class _CardOrderProductState extends State<CardOrderProduct> {
                         'Beli lagi',
                         style: TextStyle(fontSize: 12.0),
                       ),
-                      color: Color(0xFF0099FF),
+                      color: Color(0xFF986756),
                       textColor: Colors.white,
                       elevation: 3.0,
                       shape: RoundedRectangleBorder(

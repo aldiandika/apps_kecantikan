@@ -84,7 +84,7 @@ class _OrderBoxState extends State<OrderBox> {
                                   text: "Done",
                                   fontSize: 10,
                                   txtColor: Colors.white,
-                                  bgnColor: Colors.blue,
+                                  bgnColor: Color(0xFF986756),
                                 )
                               : widget.status == 2
                                   ? ButtonBooking(
@@ -97,7 +97,7 @@ class _OrderBoxState extends State<OrderBox> {
                                       ? ButtonBooking(
                                           text: "Dikirim",
                                           fontSize: 10,
-                                          txtColor: Colors.blue,
+                                          txtColor: Color(0xFF986756),
                                           bgnColor: Colors.white,
                                         )
                                       : widget.status == 4
@@ -107,7 +107,7 @@ class _OrderBoxState extends State<OrderBox> {
                                                 'Menunggu pembayaran',
                                                 style: TextStyle(
                                                   fontSize: 10.0,
-                                                  color: Colors.blue,
+                                                  color: Color(0xFFE6BCA8),
                                                 ),
                                                 textAlign: TextAlign.center,
                                               ),
@@ -129,7 +129,7 @@ class _OrderBoxState extends State<OrderBox> {
                   widget.withRecipe ? Text(
                     'Dengan resep dokter',
                     style: TextStyle(
-                      color: Colors.blue,
+                      color: Color(0xFF986756),
                       fontSize: 12,
                       fontWeight: FontWeight.bold,
                     ),
@@ -297,7 +297,7 @@ class _OrderBoxState extends State<OrderBox> {
               ),
               color: Colors.white,
               child: InkWell(
-                splashColor: Colors.blue,
+                splashColor: Colors.black26,
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.03,
                   width: MediaQuery.of(context).size.width,
@@ -311,7 +311,7 @@ class _OrderBoxState extends State<OrderBox> {
                   child: Text(
                     'Details',
                     style: TextStyle(
-                      color: Colors.blue,
+                      color: Color(0xFFE6BCA8),
                       fontWeight: FontWeight.bold,
                       fontSize: 13,
                     ),
