@@ -84,7 +84,7 @@ class _OrderBoxState extends State<OrderBox> {
                                   text: "Done",
                                   fontSize: 10,
                                   txtColor: Colors.white,
-                                  bgnColor: Colors.blue,
+                                  bgnColor: Color(0xffE6BCA8),
                                 )
                               : widget.status == 2
                                   ? ButtonBooking(
@@ -97,8 +97,8 @@ class _OrderBoxState extends State<OrderBox> {
                                       ? ButtonBooking(
                                           text: "Dikirim",
                                           fontSize: 10,
-                                          txtColor: Colors.blue,
-                                          bgnColor: Colors.white,
+                                          txtColor: Colors.white,
+                                          bgnColor: Color(0xffE6BCA8),
                                         )
                                       : widget.status == 4
                                           ? Container(
@@ -107,7 +107,7 @@ class _OrderBoxState extends State<OrderBox> {
                                                 'Menunggu pembayaran',
                                                 style: TextStyle(
                                                   fontSize: 10.0,
-                                                  color: Colors.blue,
+                                                  color: Color(0xFF986756),
                                                 ),
                                                 textAlign: TextAlign.center,
                                               ),
@@ -126,14 +126,16 @@ class _OrderBoxState extends State<OrderBox> {
                     ],
                   ),
                   SizedBox(height: 12),
-                  widget.withRecipe ? Text(
-                    'Dengan resep dokter',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ) : Container(),
+                  widget.withRecipe
+                      ? Text(
+                          'Dengan resep dokter',
+                          style: TextStyle(
+                            color: Color(0xff986756),
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        )
+                      : Container(),
                   SizedBox(height: 12),
                   Text(
                     widget.storeName,
@@ -311,7 +313,7 @@ class _OrderBoxState extends State<OrderBox> {
                   child: Text(
                     'Details',
                     style: TextStyle(
-                      color: Colors.blue,
+                      color: Color(0xffE6BCA8),
                       fontWeight: FontWeight.bold,
                       fontSize: 13,
                     ),
@@ -320,8 +322,7 @@ class _OrderBoxState extends State<OrderBox> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => OrderDetail()),
+                    MaterialPageRoute(builder: (context) => OrderDetail()),
                   );
                 },
               ),

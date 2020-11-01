@@ -25,6 +25,13 @@ class _OrderDetailState extends State<OrderDetail> {
               Navigator.pop(context, 'Back to Order History');
             },
           ),
+          backgroundColor: Color(0xFF986756),
+          shape: RoundedRectangleBorder(
+            borderRadius: const BorderRadius.only(
+              bottomLeft: Radius.circular(20.0),
+              bottomRight: Radius.circular(20.0),
+            ),
+          ),
         ),
         body: Container(
           color: Colors.black12,
@@ -111,7 +118,8 @@ class _OrderDetailState extends State<OrderDetail> {
                                         Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                              builder: (context) => RecipeDetail()),
+                                              builder: (context) =>
+                                                  RecipeDetail()),
                                         );
                                       },
                                       child: Text(
@@ -194,11 +202,12 @@ class _OrderDetailState extends State<OrderDetail> {
                               child: ConstrainedBox(
                                 constraints: BoxConstraints(maxHeight: 20.0),
                                 child: FlatButton(
-                                  onPressed: (){
+                                  onPressed: () {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => OrderStatusPage()),
+                                          builder: (context) =>
+                                              OrderStatusPage()),
                                     );
                                   },
                                   child: Text(
@@ -337,7 +346,6 @@ class _OrderDetailState extends State<OrderDetail> {
                     ),
                   ),
                 ),
-
                 SizedBox(
                   height: 16.0,
                 ),
@@ -502,7 +510,6 @@ class _OrderDetailState extends State<OrderDetail> {
                     ),
                   ),
                 ),
-
                 SizedBox(
                   height: 16.0,
                 ),
@@ -529,7 +536,6 @@ class _OrderDetailState extends State<OrderDetail> {
                     ),
                   ),
                 ),
-
                 SizedBox(
                   height: 16.0,
                 ),
@@ -553,8 +559,7 @@ class _OrderDetailState extends State<OrderDetail> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(
-                              builder: (context) => CartPage()),
+                          MaterialPageRoute(builder: (context) => CartPage()),
                         );
                       },
                     ),

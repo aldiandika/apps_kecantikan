@@ -67,7 +67,7 @@ class BookingBox extends StatelessWidget {
                                 text: "Done",
                                 fontSize: 10,
                                 txtColor: Colors.white,
-                                bgnColor: Colors.blue,
+                                bgnColor: Color(0xFF986756),
                                 width: 65,
                               )
                             : statusFinish == 2
@@ -83,7 +83,7 @@ class BookingBox extends StatelessWidget {
                                         "Starting Now",
                                         style: TextStyle(
                                           fontSize: 12,
-                                          color: Colors.blue,
+                                          color: Color(0xffE6BCA8),
                                           fontWeight: FontWeight.bold,
                                         ),
                                       )
@@ -92,7 +92,7 @@ class BookingBox extends StatelessWidget {
                                             "Today",
                                             style: TextStyle(
                                               fontSize: 12,
-                                              color: Colors.blue,
+                                              color: Color(0xFF986756),
                                               fontWeight: FontWeight.bold,
                                             ),
                                           )
@@ -100,14 +100,14 @@ class BookingBox extends StatelessWidget {
                                             ? ButtonBooking(
                                                 text: "Telemed",
                                                 fontSize: 10,
-                                                txtColor: Colors.blue,
+                                                txtColor: Color(0xffE6BCA8),
                                                 bgnColor: Colors.white,
                                               )
                                             : Text(
                                                 countDays,
                                                 style: TextStyle(
                                                   fontSize: 12,
-                                                  color: Color(0xffB6B6B6),
+                                                  color: Color(0xffE6BCA8),
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                               ),
@@ -145,7 +145,7 @@ class BookingBox extends StatelessWidget {
                           statusFinish == 0 || statusFinish == 3
                               ? ButtonBooking(
                                   text: "Cancel",
-                                  txtColor: Colors.blue,
+                                  txtColor: Color(0xFF986756),
                                   fontSize: 10,
                                   width: 70,
                                 )
@@ -156,14 +156,14 @@ class BookingBox extends StatelessWidget {
                                   text: "Reschedule",
                                   fontSize: 10,
                                   txtColor: Colors.white,
-                                  bgnColor: Colors.blue,
+                                  bgnColor: Color(0xFF986756),
                                 )
                               : statusFinish == 3
                                   ? ButtonBooking(
                                       text: "Chat",
                                       fontSize: 10,
                                       txtColor: Colors.white,
-                                      bgnColor: Colors.blue,
+                                      bgnColor: Color(0xFF986756),
                                       onPressed: () {
                                         Navigator.push(
                                           context,
@@ -216,7 +216,7 @@ class BookingBox extends StatelessWidget {
                 child: Text(
                   btnText,
                   style: TextStyle(
-                    color: Colors.blue,
+                    color: Color(0xffE6BCA8),
                     fontWeight: FontWeight.bold,
                     fontSize: 13,
                   ),

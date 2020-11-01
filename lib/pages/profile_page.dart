@@ -13,14 +13,27 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-
   @override
   Widget build(BuildContext context) {
     double heightScreen = Get.height;
     double widthScreen = Get.width;
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("Profile")),
+        title: Text("Profile"),
+        centerTitle: true,
+        backgroundColor: Color(0xFF986756),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context, 'Back to Home');
+          },
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: const BorderRadius.only(
+            bottomLeft: Radius.circular(20.0),
+            bottomRight: Radius.circular(20.0),
+          ),
+        ),
       ),
       body: Container(
         width: widthScreen,
@@ -47,9 +60,11 @@ class _ProfilePageState extends State<ProfilePage> {
               btnText: "See All",
               statusFinish: 5,
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (context) => MybookingPage(),
-                ));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MybookingPage(),
+                    ));
               },
             ),
             SizedBox(height: 15),
