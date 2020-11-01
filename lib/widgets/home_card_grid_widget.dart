@@ -53,12 +53,7 @@ class _HomeCardGridState extends State<HomeCardGrid> {
               ),
             ),
             padding: EdgeInsets.all(0.0),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => InvoicePage()),
-              );
-            },
+            onPressed: () {},
           ),
         ),
       ],
