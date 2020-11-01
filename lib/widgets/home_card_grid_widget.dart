@@ -1,3 +1,4 @@
+import 'package:apps_kecantikan/pages/invoice_page.dart';
 import 'package:apps_kecantikan/widgets/subwidget_card_rec_treat.dart';
 import 'package:flutter/material.dart';
 
@@ -52,7 +53,12 @@ class _HomeCardGridState extends State<HomeCardGrid> {
               ),
             ),
             padding: EdgeInsets.all(0.0),
-            onPressed: () => print('Button pressed'),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => InvoicePage()),
+              );
+            },
           ),
         ),
       ],
