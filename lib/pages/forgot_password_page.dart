@@ -11,6 +11,8 @@ class ForgotPassPage extends StatefulWidget {
 class _ForgotPassPageState extends State<ForgotPassPage> {
   var isEmailSent = false;
 
+  double heightFormInput = 40;
+
   @override
   void initState() {
     // TODO: implement initState
@@ -42,24 +44,27 @@ class _ForgotPassPageState extends State<ForgotPassPage> {
         child: Center(
           child: Column(
             children: [
-              TextField(
-                decoration: InputDecoration(
-                  labelText: 'Enter email',
-                  labelStyle: TextStyle(
-                    color: Color(0xFF986756),
-                  ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12.0),
-                    borderSide: BorderSide(
+              Container(
+                height: heightFormInput,
+                child: TextField(
+                  decoration: InputDecoration(
+                    labelText: 'Enter email',
+                    labelStyle: TextStyle(
                       color: Color(0xFF986756),
-                      width: 1.5,
                     ),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12.0),
-                    borderSide: BorderSide(
-                      color: Color(0xFF986756),
-                      width: 1.5,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12.0),
+                      borderSide: BorderSide(
+                        color: Color(0xFF986756),
+                        width: 1.5,
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12.0),
+                      borderSide: BorderSide(
+                        color: Color(0xFF986756),
+                        width: 1.5,
+                      ),
                     ),
                   ),
                 ),
@@ -120,7 +125,8 @@ class _ForgotPassPageState extends State<ForgotPassPage> {
                                           Radius.circular(12.0)),
                                     ),
                                     onPressed: () {
-                                      Navigator.of(context).popUntil((route) => route.isFirst);
+                                      Navigator.of(context)
+                                          .popUntil((route) => route.isFirst);
                                       Navigator.pushReplacement(
                                         context,
                                         MaterialPageRoute(

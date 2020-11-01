@@ -8,6 +8,7 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+  double heightFormInput = 40;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,49 +33,27 @@ class _RegisterPageState extends State<RegisterPage> {
         child: Center(
           child: Column(
             children: [
-              TextField(
-                decoration: InputDecoration(
-                  labelText: 'Enter email',
-                  labelStyle: TextStyle(
-                    color: Color(0xFF986756),
-                  ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12.0),
-                    borderSide: BorderSide(
+              Container(
+                height: heightFormInput,
+                child: TextField(
+                  decoration: InputDecoration(
+                    labelText: 'Enter email',
+                    labelStyle: TextStyle(
                       color: Color(0xFF986756),
-                      width: 1.5,
                     ),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12.0),
-                    borderSide: BorderSide(
-                      color: Color(0xFF986756),
-                      width: 1.5,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12.0),
+                      borderSide: BorderSide(
+                        color: Color(0xFF986756),
+                        width: 1.5,
+                      ),
                     ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 20.0,
-              ),
-              TextField(
-                decoration: InputDecoration(
-                  labelText: 'Password',
-                  labelStyle: TextStyle(
-                    color: Color(0xFF986756),
-                  ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12.0),
-                    borderSide: BorderSide(
-                      color: Color(0xFF986756),
-                      width: 1.5,
-                    ),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12.0),
-                    borderSide: BorderSide(
-                      color: Color(0xFF986756),
-                      width: 1.5,
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12.0),
+                      borderSide: BorderSide(
+                        color: Color(0xFF986756),
+                        width: 1.5,
+                      ),
                     ),
                   ),
                 ),
@@ -82,24 +61,55 @@ class _RegisterPageState extends State<RegisterPage> {
               SizedBox(
                 height: 20.0,
               ),
-              TextField(
-                decoration: InputDecoration(
-                  labelText: 'Re-Type Password',
-                  labelStyle: TextStyle(
-                    color: Color(0xFF986756),
-                  ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12.0),
-                    borderSide: BorderSide(
+              Container(
+                height: heightFormInput,
+                child: TextField(
+                  decoration: InputDecoration(
+                    labelText: 'Password',
+                    labelStyle: TextStyle(
                       color: Color(0xFF986756),
-                      width: 1.5,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12.0),
+                      borderSide: BorderSide(
+                        color: Color(0xFF986756),
+                        width: 1.5,
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12.0),
+                      borderSide: BorderSide(
+                        color: Color(0xFF986756),
+                        width: 1.5,
+                      ),
                     ),
                   ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12.0),
-                    borderSide: BorderSide(
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Container(
+                height: heightFormInput,
+                child: TextField(
+                  decoration: InputDecoration(
+                    labelText: 'Re-Type Password',
+                    labelStyle: TextStyle(
                       color: Color(0xFF986756),
-                      width: 1.5,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12.0),
+                      borderSide: BorderSide(
+                        color: Color(0xFF986756),
+                        width: 1.5,
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12.0),
+                      borderSide: BorderSide(
+                        color: Color(0xFF986756),
+                        width: 1.5,
+                      ),
                     ),
                   ),
                 ),

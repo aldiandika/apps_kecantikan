@@ -10,6 +10,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  double heightFormInput = 40;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,24 +52,27 @@ class _LoginPageState extends State<LoginPage> {
                       child: Container(
                         child: Column(
                           children: [
-                            TextField(
-                              decoration: InputDecoration(
-                                labelText: 'username',
-                                labelStyle: TextStyle(
-                                  color: Color(0xFF986756),
-                                ),
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(12.0),
-                                  borderSide: BorderSide(
+                            Container(
+                              height: heightFormInput,
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  labelText: 'username',
+                                  labelStyle: TextStyle(
                                     color: Color(0xFF986756),
-                                    width: 1.5,
                                   ),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(12.0),
-                                  borderSide: BorderSide(
-                                    color: Color(0xFF986756),
-                                    width: 1.5,
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12.0),
+                                    borderSide: BorderSide(
+                                      color: Color(0xFF986756),
+                                      width: 1.5,
+                                    ),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12.0),
+                                    borderSide: BorderSide(
+                                      color: Color(0xFF986756),
+                                      width: 1.5,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -76,24 +80,27 @@ class _LoginPageState extends State<LoginPage> {
                             SizedBox(
                               height: 20.0,
                             ),
-                            TextField(
-                              decoration: InputDecoration(
-                                labelText: 'password',
-                                labelStyle: TextStyle(
-                                  color: Color(0xFF986756),
-                                ),
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(12.0),
-                                  borderSide: BorderSide(
+                            Container(
+                              height: heightFormInput,
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  labelText: 'password',
+                                  labelStyle: TextStyle(
                                     color: Color(0xFF986756),
-                                    width: 1.5,
                                   ),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(12.0),
-                                  borderSide: BorderSide(
-                                    color: Color(0xFF986756),
-                                    width: 1.5,
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12.0),
+                                    borderSide: BorderSide(
+                                      color: Color(0xFF986756),
+                                      width: 1.5,
+                                    ),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12.0),
+                                    borderSide: BorderSide(
+                                      color: Color(0xFF986756),
+                                      width: 1.5,
+                                    ),
                                   ),
                                 ),
                               ),

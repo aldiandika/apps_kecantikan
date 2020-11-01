@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'login_page.dart';
 
 class RegistrationBiodata extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
     double heightScreen = Get.height;
