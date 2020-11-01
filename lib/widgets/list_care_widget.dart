@@ -63,7 +63,7 @@ class ListCare extends StatelessWidget {
                   Text(
                     Care.dummy[index]["harga"],
                     style: TextStyle(
-                      color: Colors.blue,
+                      color: Color(0xFF986756),
                       fontWeight: FontWeight.bold,
                       fontSize: 12,
                     ),
@@ -75,7 +75,7 @@ class ListCare extends StatelessWidget {
                         children: [
                           Icon(
                             Icons.star_border,
-                            color: Colors.blue,
+                            color: Color(0xFF986756),
                             size: 20,
                           ),
                           Text(

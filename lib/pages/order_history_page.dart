@@ -181,15 +181,15 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
               Container(
                 child: (childWidget.length > index)
                     ? Expanded(
-                        child: childWidget[index],
-                      )
+                  child: childWidget[index],
+                )
                     : Expanded(
-                      child: Container(
-                          child: Center(
-                            child: Text('Nothing to show'),
-                          ),
-                        ),
+                  child: Container(
+                    child: Center(
+                      child: Text('Nothing to show'),
                     ),
+                  ),
+                ),
               ),
             ],
           ),

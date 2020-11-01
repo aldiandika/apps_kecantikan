@@ -85,7 +85,7 @@ class ListDoctor extends StatelessWidget {
               ButtonBooking(
                 text: "Booking",
                 txtColor: Colors.white,
-                bgnColor: Colors.blue,
+                bgnColor: Color(0xFF986756),
                 onPressed: () {
                   Get.toNamed('/doctorDetails');
                 },

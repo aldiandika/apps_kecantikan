@@ -11,6 +11,19 @@ class CareDashboardPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Care"),
         centerTitle: true,
+        backgroundColor: Color(0xFF986756),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context, 'Back to Home');
+          },
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: const BorderRadius.only(
+            bottomLeft: Radius.circular(20.0),
+            bottomRight: Radius.circular(20.0),
+          ),
+        ),
       ),
       body: Container(
         color: Colors.white,

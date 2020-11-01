@@ -21,6 +21,19 @@ class _MybookingPageState extends State<MybookingPage> {
       appBar: AppBar(
         title: Text("My Booking"),
         centerTitle: true,
+        backgroundColor: Color(0xFF986756),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context, 'Back to Home');
+          },
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: const BorderRadius.only(
+            bottomLeft: Radius.circular(20.0),
+            bottomRight: Radius.circular(20.0),
+          ),
+        ),
       ),
       body: Container(
         height: heightScreen,
@@ -32,21 +45,21 @@ class _MybookingPageState extends State<MybookingPage> {
             Container(
               // padding: EdgeInsets.all(10),
               child: Row(
-
                 children: [
                   Expanded(
                     flex: 1,
                     child: Container(
                       height: 30,
                       decoration: BoxDecoration(
-                        color: index == 0 ? Colors.blue : Colors.white,
+                        color: index == 0 ? Color(0xffE6BCA8) : Colors.white,
                         borderRadius: BorderRadius.circular(30),
                       ),
                       child: MaterialButton(
                         child: Text(
                           "Dermatologist",
                           style: TextStyle(
-                            color: index == 0 ? Colors.white : Colors.blue,
+                            color:
+                                index == 0 ? Colors.white : Color(0xFF986756),
                             fontWeight: FontWeight.bold,
                             fontSize: 12,
                           ),
@@ -64,14 +77,15 @@ class _MybookingPageState extends State<MybookingPage> {
                     child: Container(
                       height: 30,
                       decoration: BoxDecoration(
-                        color: index == 1 ? Colors.blue : Colors.white,
+                        color: index == 1 ? Color(0xffE6BCA8) : Colors.white,
                         borderRadius: BorderRadius.circular(30),
                       ),
                       child: MaterialButton(
                         child: Text(
                           "Telemedicine",
                           style: TextStyle(
-                            color: index == 1 ? Colors.white : Colors.blue,
+                            color:
+                                index == 1 ? Colors.white : Color(0xFF986756),
                             fontWeight: FontWeight.bold,
                             fontSize: 12,
                           ),
@@ -89,14 +103,15 @@ class _MybookingPageState extends State<MybookingPage> {
                     child: Container(
                       height: 30,
                       decoration: BoxDecoration(
-                        color: index == 2 ? Colors.blue : Colors.white,
+                        color: index == 2 ? Color(0xffE6BCA8) : Colors.white,
                         borderRadius: BorderRadius.circular(30),
                       ),
                       child: MaterialButton(
                         child: Text(
                           "Care",
                           style: TextStyle(
-                            color: index == 2 ? Colors.white : Colors.blue,
+                            color:
+                                index == 2 ? Colors.white : Color(0xFF986756),
                             fontWeight: FontWeight.bold,
                             fontSize: 12,
                           ),
@@ -109,15 +124,14 @@ class _MybookingPageState extends State<MybookingPage> {
                       ),
                     ),
                   ),
-
                 ],
               ),
             ),
             index == 0
                 ? Expanded(child: MyBookingDermatologist())
                 : index == 1
-                ? Expanded(child: MyBookingTelemedicine())
-                : Expanded(child: MyBookingCare()),
+                    ? Expanded(child: MyBookingTelemedicine())
+                    : Expanded(child: MyBookingCare()),
           ],
         ),
       ),

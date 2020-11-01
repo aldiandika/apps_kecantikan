@@ -30,10 +30,15 @@ class _ChatPageState extends State<ChatPage> {
         children: [
           //Appbar
           Container(
-            color: Color(0xFF25A0DE),
             height: 100.0,
             padding: EdgeInsets.all(8.0),
             alignment: Alignment.bottomCenter,
+            decoration: BoxDecoration(
+                color: Color(0xFF986756),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(20.0),
+                  bottomRight: Radius.circular(20.0),
+                )),
             child: Row(
               children: [
                 Expanded(
@@ -91,7 +96,9 @@ class _ChatPageState extends State<ChatPage> {
             flex: 4,
             child: Container(
               color: Colors.black12,
-              padding: EdgeInsets.symmetric(horizontal: 8.0,),
+              padding: EdgeInsets.symmetric(
+                horizontal: 8.0,
+              ),
               child: ListView.builder(
                   itemCount: items.length,
                   reverse: true,
@@ -111,7 +118,7 @@ class _ChatPageState extends State<ChatPage> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(6.0),
                             color: (item.user == 'you')
-                                ? Color(0xFF25A0DE)
+                                ? Color(0xFFE6BCA8)
                                 : Colors.white,
                           ),
                           child: Column(
@@ -124,7 +131,7 @@ class _ChatPageState extends State<ChatPage> {
                                   fontSize: 12.0,
                                   color: (item.user == 'you')
                                       ? Colors.white
-                                      : Color(0xFF25A0DE),
+                                      : Color(0xFFE6BCA8), //0xFF25A0DE
                                 ),
                               ),
                               SizedBox(
@@ -136,7 +143,7 @@ class _ChatPageState extends State<ChatPage> {
                                   fontSize: 16.0,
                                   color: (item.user == 'you')
                                       ? Colors.white
-                                      : Color(0xFF25A0DE),
+                                      : Color(0xFFE6BCA8),
                                 ),
                               ),
                             ],
@@ -155,13 +162,16 @@ class _ChatPageState extends State<ChatPage> {
               child: ListTile(
                 title: TextField(
                   controller: msgCon,
+                  cursorColor: Color(0xFF986756),
+                  decoration: InputDecoration.collapsed(
+                    border: InputBorder.none,
+                  ),
                 ),
                 trailing: IconButton(
-                  icon: Icon(Icons.send),
-                  color: Colors.blue,
-                  disabledColor: Colors.grey,
-                  onPressed: sendMessage
-                ),
+                    icon: Icon(Icons.send),
+                    color: Color(0xFF986756),
+                    disabledColor: Colors.grey,
+                    onPressed: sendMessage),
               ),
             ),
           ),

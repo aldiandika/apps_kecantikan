@@ -40,7 +40,7 @@ class TelemedicineDoctorDetails extends StatelessWidget {
                     children: [
                       Icon(
                         Icons.layers,
-                        color: Colors.blue,
+                        color: Color(0xFF986756),
                       ),
                       SizedBox(width: 10),
                       Text(
@@ -48,7 +48,7 @@ class TelemedicineDoctorDetails extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
-                          color: Colors.blue,
+                          color: Color(0xFF986756),
                         ),
                       ),
                     ],
@@ -106,7 +106,7 @@ class TelemedicineDoctorDetails extends StatelessWidget {
                     children: [
                       ButtonBooking(
                         text: "Back",
-                        txtColor: Colors.blue,
+                        txtColor: Color(0xFF986756),
                         bgnColor: Colors.white,
                         onPressed: () {
                           Get.back();
@@ -116,7 +116,7 @@ class TelemedicineDoctorDetails extends StatelessWidget {
                       ButtonBooking(
                         text: "Booking",
                         txtColor: Colors.white,
-                        bgnColor: Colors.blue,
+                        bgnColor: Color(0xFF986756),
                         onPressed: () {
                           Get.toNamed('/bookingTelemedicineMenu');
                         },

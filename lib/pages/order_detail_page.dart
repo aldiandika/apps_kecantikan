@@ -113,7 +113,7 @@ class _OrderDetailState extends State<OrderDetail> {
                                   alignment: Alignment.centerRight,
                                   child: ConstrainedBox(
                                     constraints:
-                                        BoxConstraints(maxHeight: 20.0),
+                                    BoxConstraints(maxHeight: 20.0),
                                     child: FlatButton(
                                       onPressed: () {
                                         Navigator.push(
@@ -250,19 +250,19 @@ class _OrderDetailState extends State<OrderDetail> {
                         .productDummy.length, // Number of Product
                     itemBuilder: (context, index) => CardOrderProduct(
                       productName: ProductListDummy.productDummy[index]
-                          ["productName"],
+                      ["productName"],
                       productImage: ProductListDummy.productDummy[index]
-                          ["productImage"],
+                      ["productImage"],
                       productPrice: ProductListDummy.productDummy[index]
-                          ["productPrice"],
+                      ["productPrice"],
                       productQty: ProductListDummy.productDummy[index]
-                          ["productQty"],
+                      ["productQty"],
                       productSize: ProductListDummy.productDummy[index]
-                          ["productSize"],
+                      ["productSize"],
                       withRecipe: ProductListDummy.productDummy[index]
-                          ["withRecipe"],
+                      ["withRecipe"],
                       productTotalPrice: ProductListDummy.productDummy[index]
-                          ["productTotalPrice"],
+                      ["productTotalPrice"],
                     ),
                   ),
                 ),

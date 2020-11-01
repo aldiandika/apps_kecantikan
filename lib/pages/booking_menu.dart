@@ -120,7 +120,7 @@ class BookingMenu extends StatelessWidget {
                         children: [
                           ButtonBooking(
                             text: "Back",
-                            txtColor: Colors.blue,
+                            txtColor: Color(0xFF986756),
                             bgnColor: Colors.white,
                             onPressed: () {
                               Get.back();
@@ -130,7 +130,7 @@ class BookingMenu extends StatelessWidget {
                           ButtonBooking(
                             text: "Confirm",
                             txtColor: Colors.white,
-                            bgnColor: Colors.blue,
+                            bgnColor: Color(0xFF986756),
                             onPressed: () {
                               // Get.toNamed('/bookingMenu');
                             },

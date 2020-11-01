@@ -158,16 +158,18 @@ class PembelianBox extends StatelessWidget {
                 child: Text(
                   btnText,
                   style: TextStyle(
-                    color: Colors.blue,
+                    color: Color(0xffE6BCA8),
                     fontWeight: FontWeight.bold,
                     fontSize: 13,
                   ),
                 ),
               ),
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (context) => OrderHistoryPage(),
-                ));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => OrderHistoryPage(),
+                    ));
               },
             ),
           ),

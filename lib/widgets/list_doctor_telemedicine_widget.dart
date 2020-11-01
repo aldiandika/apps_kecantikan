@@ -75,7 +75,7 @@ class ListDoctorTelemedecine extends StatelessWidget {
                   Text(
                     DeramtologyDummy.dummy[index]["harga"],
                     style: TextStyle(
-                      color: Colors.blueAccent,
+                      color: Color(0xFF986756),
                       fontSize: 12,
                       fontWeight: FontWeight.bold,
                     ),
@@ -93,7 +93,7 @@ class ListDoctorTelemedecine extends StatelessWidget {
               ButtonBooking(
                 text: "Booking",
                 txtColor: Colors.white,
-                bgnColor: Colors.blue,
+                bgnColor: Color(0xFF986756),
                 onPressed: () {
                   Get.toNamed('/TelemedicineDoctorDetails');
                 },

@@ -12,6 +12,19 @@ class TelemedicineBookingDetail extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Telemedicine Booking Detail"),
+        backgroundColor: Color(0xFF986756),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context, 'Back to Home');
+          },
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: const BorderRadius.only(
+            bottomLeft: Radius.circular(20.0),
+            bottomRight: Radius.circular(20.0),
+          ),
+        ),
       ),
       body: Center(
         child: Container(
@@ -169,7 +182,7 @@ class TelemedicineBookingDetail extends StatelessWidget {
                   ButtonBooking(
                     text: "Cancel",
                     fontSize: 10,
-                    txtColor: Colors.blue,
+                    txtColor: Color(0xFF986756),
                     bgnColor: Colors.white,
                   ),
                   SizedBox(width: 20),
@@ -177,7 +190,7 @@ class TelemedicineBookingDetail extends StatelessWidget {
                     text: "Chat",
                     fontSize: 10,
                     txtColor: Colors.white,
-                    bgnColor: Colors.blue,
+                    bgnColor: Color(0xFF986756),
                     onPressed: () {
                       Navigator.push(
                         context,

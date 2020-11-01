@@ -90,7 +90,7 @@ class RecipeBox extends StatelessWidget {
                             text: "Order",
                             fontSize: 10,
                             txtColor: Colors.white,
-                            bgnColor: Colors.blue,
+                            bgnColor: Color(0xFF986756),
                           ),
                         ],
                       ),
@@ -135,16 +135,18 @@ class RecipeBox extends StatelessWidget {
                 child: Text(
                   "See All",
                   style: TextStyle(
-                    color: Colors.blue,
+                    color: Color(0xffE6BCA8),
                     fontWeight: FontWeight.bold,
                     fontSize: 13,
                   ),
                 ),
               ),
-              onTap:  () {
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (context) => RecipePage(),
-                ));
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => RecipePage(),
+                    ));
               },
             ),
           ),
