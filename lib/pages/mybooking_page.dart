@@ -1,4 +1,5 @@
 import 'package:apps_kecantikan/pages/myBooking_dermatologist.dart';
+import 'package:apps_kecantikan/widgets/bottom_nav_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -25,7 +26,11 @@ class _MybookingPageState extends State<MybookingPage> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context, 'Back to Home');
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => BottomNavWidget()),
+            );
           },
         ),
         shape: RoundedRectangleBorder(

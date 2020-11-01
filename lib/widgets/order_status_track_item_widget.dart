@@ -33,7 +33,7 @@ class _TrackItemState extends State<TrackItemWidget> {
               widget.headTitle,
               style: TextStyle(
                 fontSize: 14.0,
-                color: Color(0xFF0099FF),
+                color: Color(0xFF986756),
                 fontWeight: FontWeight.w700,
               ),
             ),

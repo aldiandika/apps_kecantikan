@@ -1,4 +1,5 @@
 import 'package:apps_kecantikan/widgets/booking_box_widget.dart';
+import 'package:apps_kecantikan/widgets/bottom_nav_widget.dart';
 import 'package:apps_kecantikan/widgets/pembelianBarang_box_widget.dart';
 import 'package:apps_kecantikan/widgets/recipe_box_widget.dart';
 import 'package:apps_kecantikan/widgets/profile_header.dart';
@@ -25,7 +26,11 @@ class _ProfilePageState extends State<ProfilePage> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context, 'Back to Home');
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => BottomNavWidget()),
+            );
           },
         ),
         shape: RoundedRectangleBorder(

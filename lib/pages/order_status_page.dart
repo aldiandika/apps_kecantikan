@@ -17,11 +17,18 @@ class _OrderStatusPageState extends State<OrderStatusPage> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Order Status'),
+          backgroundColor: Color(0xFF986756),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.pop(context, 'Back to Order Detail');
             },
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: const BorderRadius.only(
+              bottomLeft: Radius.circular(20.0),
+              bottomRight: Radius.circular(20.0),
+            ),
           ),
         ),
         body: Container(
@@ -75,7 +82,7 @@ class _OrderStatusPageState extends State<OrderStatusPage> {
                                     child: Text(
                                       'salin',
                                       style: TextStyle(
-                                        color: Color(0xFF0099FF),
+                                        color: Color(0xFF986756),
                                       ),
                                     ),
                                   ),
@@ -127,7 +134,7 @@ class _OrderStatusPageState extends State<OrderStatusPage> {
                           isFirst: true,
                           indicatorStyle: const IndicatorStyle(
                             width: 15,
-                            color: Color(0xFF0099FF),
+                            color: Color(0xFF986756),
                           ),
                           beforeLineStyle: const LineStyle(
                             color: Colors.black26,
