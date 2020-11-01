@@ -5,6 +5,8 @@ class SearchFilterWidget extends StatelessWidget {
   double heightScreen = Get.height;
   double widthScreen = Get.width;
 
+  double heightFormInput = 40;
+
   final String hintText;
 
   SearchFilterWidget({Key key, this.hintText = "Cari Dokter"}) : super(key: key);

@@ -5,6 +5,8 @@ import 'package:apps_kecantikan/pages/recipe_detail_page.dart';
 import 'package:apps_kecantikan/widgets/order_card_product_widget.dart';
 import 'package:flutter/material.dart';
 
+import 'invoice_page.dart';
+
 class OrderDetail extends StatefulWidget {
   @override
   _OrderDetailState createState() => _OrderDetailState();
@@ -82,15 +84,40 @@ class _OrderDetailState extends State<OrderDetail> {
                           SizedBox(
                             height: 8.0,
                           ),
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              'No. Invoice : KC/OR/090-129',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500,
+                          Row(
+                            children: [
+                              Expanded(
+                                flex: 3,
+                                child: Container(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    'No. Invoice : KC/OR/090-129',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ),
                               ),
-                            ),
+                              Expanded(
+                                flex: 1,
+                                child: FlatButton(
+                                    child: Text(
+                                      "Invoice",
+                                      style: TextStyle(
+                                        color: Color(0xFFE6BCA8),
+                                      ),
+                                    ),
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                InvoicePage()),
+                                      );
+                                    }),
+                              ),
+                            ],
                           ),
                           SizedBox(
                             height: 8.0,
@@ -113,13 +140,14 @@ class _OrderDetailState extends State<OrderDetail> {
                                   alignment: Alignment.centerRight,
                                   child: ConstrainedBox(
                                     constraints:
-                                    BoxConstraints(maxHeight: 20.0),
+                                        BoxConstraints(maxHeight: 20.0),
                                     child: FlatButton(
                                       onPressed: () {
                                         Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                              builder: (context) => RecipeDetail()),
+                                              builder: (context) =>
+                                                  RecipeDetail()),
                                         );
                                       },
                                       child: Text(
@@ -202,11 +230,12 @@ class _OrderDetailState extends State<OrderDetail> {
                               child: ConstrainedBox(
                                 constraints: BoxConstraints(maxHeight: 20.0),
                                 child: FlatButton(
-                                  onPressed: (){
+                                  onPressed: () {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => OrderStatusPage()),
+                                          builder: (context) =>
+                                              OrderStatusPage()),
                                     );
                                   },
                                   child: Text(
@@ -250,19 +279,19 @@ class _OrderDetailState extends State<OrderDetail> {
                         .productDummy.length, // Number of Product
                     itemBuilder: (context, index) => CardOrderProduct(
                       productName: ProductListDummy.productDummy[index]
-                      ["productName"],
+                          ["productName"],
                       productImage: ProductListDummy.productDummy[index]
-                      ["productImage"],
+                          ["productImage"],
                       productPrice: ProductListDummy.productDummy[index]
-                      ["productPrice"],
+                          ["productPrice"],
                       productQty: ProductListDummy.productDummy[index]
-                      ["productQty"],
+                          ["productQty"],
                       productSize: ProductListDummy.productDummy[index]
-                      ["productSize"],
+                          ["productSize"],
                       withRecipe: ProductListDummy.productDummy[index]
-                      ["withRecipe"],
+                          ["withRecipe"],
                       productTotalPrice: ProductListDummy.productDummy[index]
-                      ["productTotalPrice"],
+                          ["productTotalPrice"],
                     ),
                   ),
                 ),
@@ -345,7 +374,6 @@ class _OrderDetailState extends State<OrderDetail> {
                     ),
                   ),
                 ),
-
                 SizedBox(
                   height: 16.0,
                 ),
@@ -510,7 +538,6 @@ class _OrderDetailState extends State<OrderDetail> {
                     ),
                   ),
                 ),
-
                 SizedBox(
                   height: 16.0,
                 ),
@@ -537,7 +564,6 @@ class _OrderDetailState extends State<OrderDetail> {
                     ),
                   ),
                 ),
-
                 SizedBox(
                   height: 16.0,
                 ),
@@ -561,8 +587,7 @@ class _OrderDetailState extends State<OrderDetail> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(
-                              builder: (context) => CartPage()),
+                          MaterialPageRoute(builder: (context) => CartPage()),
                         );
                       },
                     ),
