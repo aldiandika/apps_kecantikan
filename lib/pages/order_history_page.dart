@@ -46,11 +46,19 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Order History'),
+          backgroundColor: Color(0xFF986756),
+          centerTitle: true,
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.pop(context, 'Back to Profile');
             },
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: const BorderRadius.only(
+              bottomLeft: Radius.circular(20.0),
+              bottomRight: Radius.circular(20.0),
+            ),
           ),
         ),
         body: Container(
@@ -73,15 +81,14 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
                       Container(
                         height: 30,
                         decoration: BoxDecoration(
-                          color: index == 0 ? Color(0xffE6BCA8) : Colors.white,
+                          color: index == 0 ? Color(0xFFE6BCA8) : Colors.white,
                           borderRadius: BorderRadius.circular(30),
                         ),
                         child: MaterialButton(
                           child: Text(
                             "Semua",
                             style: TextStyle(
-                              color:
-                                  index == 0 ? Colors.white : Color(0xFF986756),
+                              color: index == 0 ? Colors.white : Color(0xFF986756),
                               fontWeight: FontWeight.bold,
                               fontSize: 15,
                             ),
@@ -94,15 +101,14 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
                       Container(
                         height: 30,
                         decoration: BoxDecoration(
-                          color: index == 1 ? Color(0xffE6BCA8) : Colors.white,
+                          color: index == 1 ? Color(0xFFE6BCA8) : Colors.white,
                           borderRadius: BorderRadius.circular(30),
                         ),
                         child: MaterialButton(
                           child: Text(
                             "Belum dibayar",
                             style: TextStyle(
-                              color:
-                                  index == 1 ? Colors.white : Color(0xFF986756),
+                              color: index == 1 ? Colors.white : Color(0xFF986756),
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -114,15 +120,14 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
                       Container(
                         height: 30,
                         decoration: BoxDecoration(
-                          color: index == 2 ? Color(0xffE6BCA8) : Colors.white,
+                          color: index == 2 ? Color(0xFFE6BCA8) : Colors.white,
                           borderRadius: BorderRadius.circular(30),
                         ),
                         child: MaterialButton(
                           child: Text(
                             "Selesai",
                             style: TextStyle(
-                              color:
-                                  index == 2 ? Colors.white : Color(0xFF986756),
+                              color: index == 2 ? Colors.white : Color(0xFF986756),
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -134,15 +139,14 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
                       Container(
                         height: 30,
                         decoration: BoxDecoration(
-                          color: index == 3 ? Color(0xffE6BCA8) : Colors.white,
+                          color: index == 3 ? Color(0xFFE6BCA8) : Colors.white,
                           borderRadius: BorderRadius.circular(30),
                         ),
                         child: MaterialButton(
                           child: Text(
                             "Dikirim",
                             style: TextStyle(
-                              color:
-                                  index == 3 ? Colors.white : Color(0xFF986756),
+                              color: index == 3 ? Colors.white : Color(0xFF986756),
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -154,15 +158,14 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
                       Container(
                         height: 30,
                         decoration: BoxDecoration(
-                          color: index == 4 ? Color(0xffE6BCA8) : Colors.white,
+                          color: index == 4 ? Color(0xFFE6BCA8) : Colors.white,
                           borderRadius: BorderRadius.circular(30),
                         ),
                         child: MaterialButton(
                           child: Text(
                             "Cancel",
                             style: TextStyle(
-                              color:
-                                  index == 4 ? Colors.white : Color(0xFF986756),
+                              color: index == 4 ? Colors.white : Color(0xFF986756),
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -178,15 +181,15 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
               Container(
                 child: (childWidget.length > index)
                     ? Expanded(
-                        child: childWidget[index],
-                      )
+                  child: childWidget[index],
+                )
                     : Expanded(
-                        child: Container(
-                          child: Center(
-                            child: Text('Nothing to show'),
-                          ),
-                        ),
-                      ),
+                  child: Container(
+                    child: Center(
+                      child: Text('Nothing to show'),
+                    ),
+                  ),
+                ),
               ),
             ],
           ),

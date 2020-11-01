@@ -14,13 +14,13 @@ class OrderBox extends StatefulWidget {
 
   const OrderBox(
       {Key key,
-      this.date = "",
-      this.invoiceNumber = "",
-      this.withRecipe = false,
-      this.storeName = "",
-      this.productInfo,
-      this.status = 0,
-      this.bill})
+        this.date = "",
+        this.invoiceNumber = "",
+        this.withRecipe = false,
+        this.storeName = "",
+        this.productInfo,
+        this.status = 0,
+        this.bill})
       : super(key: key);
 
   @override
@@ -81,61 +81,59 @@ class _OrderBoxState extends State<OrderBox> {
                           alignment: Alignment.topRight,
                           child: widget.status == 1
                               ? ButtonBooking(
-                                  text: "Done",
-                                  fontSize: 10,
-                                  txtColor: Colors.white,
-                                  bgnColor: Color(0xffE6BCA8),
-                                )
+                            text: "Done",
+                            fontSize: 10,
+                            txtColor: Colors.white,
+                            bgnColor: Color(0xFF986756),
+                          )
                               : widget.status == 2
-                                  ? ButtonBooking(
-                                      text: "Cancel",
-                                      fontSize: 10,
-                                      txtColor: Colors.white,
-                                      bgnColor: Colors.red,
-                                    )
-                                  : widget.status == 3
-                                      ? ButtonBooking(
-                                          text: "Dikirim",
-                                          fontSize: 10,
-                                          txtColor: Colors.white,
-                                          bgnColor: Color(0xffE6BCA8),
-                                        )
-                                      : widget.status == 4
-                                          ? Container(
-                                              alignment: Alignment.center,
-                                              child: Text(
-                                                'Menunggu pembayaran',
-                                                style: TextStyle(
-                                                  fontSize: 10.0,
-                                                  color: Color(0xFF986756),
-                                                ),
-                                                textAlign: TextAlign.center,
-                                              ),
-                                            )
-                                          : Container(
-                                              child: Text(
-                                                'Menunggu pembayaran',
-                                                style: TextStyle(
-                                                  fontSize: 10,
-                                                  color: Colors.white,
-                                                ),
-                                              ),
-                                            ),
+                              ? ButtonBooking(
+                            text: "Cancel",
+                            fontSize: 10,
+                            txtColor: Colors.white,
+                            bgnColor: Colors.red,
+                          )
+                              : widget.status == 3
+                              ? ButtonBooking(
+                            text: "Dikirim",
+                            fontSize: 10,
+                            txtColor: Color(0xFF986756),
+                            bgnColor: Colors.white,
+                          )
+                              : widget.status == 4
+                              ? Container(
+                            alignment: Alignment.center,
+                            child: Text(
+                              'Menunggu pembayaran',
+                              style: TextStyle(
+                                fontSize: 10.0,
+                                color: Color(0xFFE6BCA8),
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          )
+                              : Container(
+                            child: Text(
+                              'Menunggu pembayaran',
+                              style: TextStyle(
+                                fontSize: 10,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
                         ),
                       ),
                     ],
                   ),
                   SizedBox(height: 12),
-                  widget.withRecipe
-                      ? Text(
-                          'Dengan resep dokter',
-                          style: TextStyle(
-                            color: Color(0xff986756),
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        )
-                      : Container(),
+                  widget.withRecipe ? Text(
+                    'Dengan resep dokter',
+                    style: TextStyle(
+                      color: Color(0xFF986756),
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ) : Container(),
                   SizedBox(height: 12),
                   Text(
                     widget.storeName,
@@ -299,7 +297,7 @@ class _OrderBoxState extends State<OrderBox> {
               ),
               color: Colors.white,
               child: InkWell(
-                splashColor: Colors.blue,
+                splashColor: Colors.black26,
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.03,
                   width: MediaQuery.of(context).size.width,
@@ -313,7 +311,7 @@ class _OrderBoxState extends State<OrderBox> {
                   child: Text(
                     'Details',
                     style: TextStyle(
-                      color: Color(0xffE6BCA8),
+                      color: Color(0xFFE6BCA8),
                       fontWeight: FontWeight.bold,
                       fontSize: 13,
                     ),
@@ -322,7 +320,8 @@ class _OrderBoxState extends State<OrderBox> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => OrderDetail()),
+                    MaterialPageRoute(
+                        builder: (context) => OrderDetail()),
                   );
                 },
               ),

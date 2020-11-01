@@ -17,15 +17,17 @@ class _OrderDetailState extends State<OrderDetail> {
 
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Color(0xEEFFFFFF),
         appBar: AppBar(
           title: Text('Order Detail'),
+          backgroundColor: Color(0xFF986756),
+          centerTitle: true,
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.pop(context, 'Back to Order History');
             },
           ),
-          backgroundColor: Color(0xFF986756),
           shape: RoundedRectangleBorder(
             borderRadius: const BorderRadius.only(
               bottomLeft: Radius.circular(20.0),
@@ -34,7 +36,6 @@ class _OrderDetailState extends State<OrderDetail> {
           ),
         ),
         body: Container(
-          color: Colors.black12,
           padding: EdgeInsets.all(8.0),
           child: SingleChildScrollView(
             child: Column(
@@ -112,20 +113,19 @@ class _OrderDetailState extends State<OrderDetail> {
                                   alignment: Alignment.centerRight,
                                   child: ConstrainedBox(
                                     constraints:
-                                        BoxConstraints(maxHeight: 20.0),
+                                    BoxConstraints(maxHeight: 20.0),
                                     child: FlatButton(
                                       onPressed: () {
                                         Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                              builder: (context) =>
-                                                  RecipeDetail()),
+                                              builder: (context) => RecipeDetail()),
                                         );
                                       },
                                       child: Text(
                                         'lihat',
                                         style: TextStyle(
-                                          color: Color(0xFF0099FF),
+                                          color: Color(0xFFE6BCA8),
                                         ),
                                       ),
                                     ),
@@ -173,7 +173,7 @@ class _OrderDetailState extends State<OrderDetail> {
                                   child: Text(
                                     'Dikirim',
                                     style: TextStyle(
-                                      color: Colors.blue,
+                                      color: Color(0xFF986756),
                                       fontWeight: FontWeight.w700,
                                       fontSize: 18.0,
                                     ),
@@ -202,18 +202,17 @@ class _OrderDetailState extends State<OrderDetail> {
                               child: ConstrainedBox(
                                 constraints: BoxConstraints(maxHeight: 20.0),
                                 child: FlatButton(
-                                  onPressed: () {
+                                  onPressed: (){
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) =>
-                                              OrderStatusPage()),
+                                          builder: (context) => OrderStatusPage()),
                                     );
                                   },
                                   child: Text(
                                     'lihat',
                                     style: TextStyle(
-                                      color: Color(0xFF0099FF),
+                                      color: Color(0xFFE6BCA8),
                                     ),
                                   ),
                                 ),
@@ -251,19 +250,19 @@ class _OrderDetailState extends State<OrderDetail> {
                         .productDummy.length, // Number of Product
                     itemBuilder: (context, index) => CardOrderProduct(
                       productName: ProductListDummy.productDummy[index]
-                          ["productName"],
+                      ["productName"],
                       productImage: ProductListDummy.productDummy[index]
-                          ["productImage"],
+                      ["productImage"],
                       productPrice: ProductListDummy.productDummy[index]
-                          ["productPrice"],
+                      ["productPrice"],
                       productQty: ProductListDummy.productDummy[index]
-                          ["productQty"],
+                      ["productQty"],
                       productSize: ProductListDummy.productDummy[index]
-                          ["productSize"],
+                      ["productSize"],
                       withRecipe: ProductListDummy.productDummy[index]
-                          ["withRecipe"],
+                      ["withRecipe"],
                       productTotalPrice: ProductListDummy.productDummy[index]
-                          ["productTotalPrice"],
+                      ["productTotalPrice"],
                     ),
                   ),
                 ),
@@ -346,6 +345,7 @@ class _OrderDetailState extends State<OrderDetail> {
                     ),
                   ),
                 ),
+
                 SizedBox(
                   height: 16.0,
                 ),
@@ -510,6 +510,7 @@ class _OrderDetailState extends State<OrderDetail> {
                     ),
                   ),
                 ),
+
                 SizedBox(
                   height: 16.0,
                 ),
@@ -525,7 +526,7 @@ class _OrderDetailState extends State<OrderDetail> {
                         style: TextStyle(fontSize: 16.0),
                       ),
                       color: Colors.white,
-                      textColor: Color(0xFF0099FF),
+                      textColor: Color(0xFF986756),
                       elevation: 3.0,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(16.0)),
@@ -536,6 +537,7 @@ class _OrderDetailState extends State<OrderDetail> {
                     ),
                   ),
                 ),
+
                 SizedBox(
                   height: 16.0,
                 ),
@@ -550,7 +552,7 @@ class _OrderDetailState extends State<OrderDetail> {
                         'Beli lagi',
                         style: TextStyle(fontSize: 16.0),
                       ),
-                      color: Color(0xFF0099FF),
+                      color: Color(0xFF986756),
                       textColor: Colors.white,
                       elevation: 3.0,
                       shape: RoundedRectangleBorder(
@@ -559,7 +561,8 @@ class _OrderDetailState extends State<OrderDetail> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => CartPage()),
+                          MaterialPageRoute(
+                              builder: (context) => CartPage()),
                         );
                       },
                     ),
