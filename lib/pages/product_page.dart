@@ -16,11 +16,18 @@ class _ProductPageState extends State<ProductPage> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Products'),
+          backgroundColor: Color(0xFF986756),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.pop(context, 'Back to Home');
             },
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: const BorderRadius.only(
+              bottomLeft: Radius.circular(20.0),
+              bottomRight: Radius.circular(20.0),
+            ),
           ),
         ),
         body: Column(
@@ -48,7 +55,8 @@ class _ProductPageState extends State<ProductPage> {
                                 hintText: "Cari Produk",
                                 border: InputBorder.none,
                                 suffixIcon: IconButton(
-                                    icon: Icon(Icons.search), onPressed: () {})),
+                                    icon: Icon(Icons.search),
+                                    onPressed: () {})),
                           ),
                         ),
                       ),
@@ -77,7 +85,7 @@ class _ProductPageState extends State<ProductPage> {
                     physics: NeverScrollableScrollPhysics(),
                     childAspectRatio: (3 / 4),
                     padding:
-                        EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
+                        EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
                     children: generateNumbers().map((int i) {
                       return CardProduct();
                     }).toList(),

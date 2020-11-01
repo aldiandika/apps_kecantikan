@@ -14,11 +14,18 @@ class _TransferPageState extends State<TransferPage> {
         appBar: AppBar(
           title: Text('Transfer'),
           centerTitle: true,
+          backgroundColor: Color(0xFF986756),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.pop(context, 'Back');
             },
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: const BorderRadius.only(
+              bottomLeft: Radius.circular(20.0),
+              bottomRight: Radius.circular(20.0),
+            ),
           ),
         ),
         body: Container(
@@ -148,7 +155,7 @@ class _TransferPageState extends State<TransferPage> {
                                     style: TextStyle(fontSize: 12.0),
                                   ),
                                   color: Colors.white,
-                                  textColor: Color(0xFF0099FF),
+                                  textColor: Color(0xFF986756),
                                   elevation: 3.0,
                                   shape: RoundedRectangleBorder(
                                     borderRadius:
@@ -175,7 +182,7 @@ class _TransferPageState extends State<TransferPage> {
                                     'Konfirmasi',
                                     style: TextStyle(fontSize: 12.0),
                                   ),
-                                  color: Color(0xFF0099FF),
+                                  color: Color(0xFF986756),
                                   textColor: Colors.white,
                                   elevation: 3.0,
                                   shape: RoundedRectangleBorder(

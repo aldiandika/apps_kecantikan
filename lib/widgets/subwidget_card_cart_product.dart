@@ -56,7 +56,6 @@ class _CardCartProductState extends State<CardCartProduct> {
                                 margin: EdgeInsets.only(
                                   right: 4.0,
                                 ),
-                                color: Colors.redAccent,
                                 child: Image.asset(
                                   'assets/images/product.jpg',
                                   fit: BoxFit.cover,
@@ -97,7 +96,7 @@ class _CardCartProductState extends State<CardCartProduct> {
                                       IconButton(
                                         icon: Icon(
                                           Icons.remove_circle,
-                                          color: Color(0xFF0099FF),
+                                          color: Color(0xFF986756),
                                         ),
                                         onPressed: () => print('Kurang'),
                                       ),
@@ -105,7 +104,7 @@ class _CardCartProductState extends State<CardCartProduct> {
                                       IconButton(
                                         icon: Icon(
                                           Icons.add_circle,
-                                          color: Color(0xFF0099FF),
+                                          color: Color(0xFF986756),
                                         ),
                                         onPressed: () => print('Tambah'),
                                       ),
@@ -140,7 +139,7 @@ class _CardCartProductState extends State<CardCartProduct> {
                                         'Hapus',
                                         style: TextStyle(fontSize: 12.0),
                                       ),
-                                      color: Color(0xFFFF7583),
+                                      color: Color(0xFF986756),
                                       textColor: Colors.white,
                                       elevation: 3.0,
                                       shape: RoundedRectangleBorder(
@@ -170,7 +169,7 @@ class _CardCartProductState extends State<CardCartProduct> {
                   child: Text(
                     'Details',
                     style: TextStyle(
-                      color: Color(0xFF0099FF),
+                      color: Color(0xFFE6BCA8),
                     ),
                   ),
                 ),

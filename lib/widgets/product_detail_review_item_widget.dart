@@ -24,6 +24,7 @@ class _ProductReviewItemState extends State<ProductReviewItem> {
                   padding: EdgeInsets.all(4.0),
                   child: CircleAvatar(
                     maxRadius: 20.0,
+                    backgroundColor: Colors.grey,
                   ),
                 ),
               ),
@@ -52,7 +53,7 @@ class _ProductReviewItemState extends State<ProductReviewItem> {
                           children: [
                             Icon(
                               Icons.star_border,
-                              color: Color(0xFF25A0DE),
+                              color: Color(0xFF986756),
                             ),
                             SizedBox(
                               width: 1.0,

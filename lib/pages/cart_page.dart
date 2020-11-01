@@ -16,11 +16,18 @@ class _CartPageState extends State<CartPage> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Cart Summary'),
+          backgroundColor: Color(0xFF986756),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.pop(context, 'Back to Home');
             },
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: const BorderRadius.only(
+              bottomLeft: Radius.circular(20.0),
+              bottomRight: Radius.circular(20.0),
+            ),
           ),
         ),
         body: Column(
@@ -72,7 +79,7 @@ class _CartPageState extends State<CartPage> {
                             'Checkout',
                             style: TextStyle(fontSize: 12.0),
                           ),
-                          color: Color(0xFF0099FF),
+                          color: Color(0xFF986756),
                           textColor: Colors.white,
                           elevation: 3.0,
                           shape: RoundedRectangleBorder(

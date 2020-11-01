@@ -14,6 +14,13 @@ class RecipeDetail extends StatelessWidget {
       appBar: AppBar(
         title: Text("Recipe Detail"),
         centerTitle: true,
+        backgroundColor: Color(0xFF986756),
+        shape: RoundedRectangleBorder(
+          borderRadius: const BorderRadius.only(
+            bottomLeft: Radius.circular(20.0),
+            bottomRight: Radius.circular(20.0),
+          ),
+        ),
       ),
       body: Center(
         child: Container(
@@ -126,7 +133,7 @@ class RecipeDetail extends StatelessWidget {
                                         style: TextStyle(
                                           fontWeight: FontWeight.w500,
                                           fontSize: 10,
-                                          color: Colors.blue,
+                                          color: Color(0xFF986756),
                                         ),
                                       ),
                                     ),
@@ -216,7 +223,7 @@ class RecipeDetail extends StatelessWidget {
                                         style: TextStyle(
                                           fontWeight: FontWeight.w500,
                                           fontSize: 10,
-                                          color: Colors.blue,
+                                          color: Color(0xFF986756),
                                         ),
                                       ),
                                     ),
@@ -290,7 +297,7 @@ class RecipeDetail extends StatelessWidget {
                   text: "Order",
                   fontSize: 16,
                   txtColor: Colors.white,
-                  bgnColor: Colors.blue,
+                  bgnColor: Color(0xFF986756),
                   onPressed: (){
                     Navigator.push(
                       context,

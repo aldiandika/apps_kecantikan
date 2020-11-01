@@ -20,11 +20,19 @@ class _CheckoutPageState extends State<CheckoutPage> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Checkout'),
+          backgroundColor: Color(0xFF986756),
+          centerTitle: true,
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.pop(context, 'Back');
             },
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: const BorderRadius.only(
+              bottomLeft: Radius.circular(20.0),
+              bottomRight: Radius.circular(20.0),
+            ),
           ),
         ),
         body: Column(

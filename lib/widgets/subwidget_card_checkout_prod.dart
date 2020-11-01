@@ -150,7 +150,7 @@ class _CardCheckoutProdState extends State<CardCheckoutProd> {
                       style: TextStyle(
                         fontSize: 12.0,
                         fontWeight: FontWeight.w800,
-                        color: Color(0xFF25A0DE),
+                        color: Color(0xFFE6BCA8),
                       ),
                     ),
 
@@ -223,7 +223,7 @@ class _CardCheckoutProdState extends State<CardCheckoutProd> {
                                 'Ubah',
                                 style: TextStyle(fontSize: 12.0),
                               ),
-                              color: Color(0xFF0099FF),
+                              color: Color(0xFF986756),
                               textColor: Colors.white,
                               elevation: 3.0,
                               shape: RoundedRectangleBorder(

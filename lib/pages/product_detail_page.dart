@@ -15,11 +15,18 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Product Detail'),
+          backgroundColor: Color(0xFF986756),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.pop(context, 'Back to Home');
             },
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: const BorderRadius.only(
+              bottomLeft: Radius.circular(20.0),
+              bottomRight: Radius.circular(20.0),
+            ),
           ),
           actions: [
             Padding(
@@ -70,7 +77,9 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                     ),
                                     overflow: TextOverflow.clip,
                                   ),
-                                  SizedBox(height: 12.0,),
+                                  SizedBox(
+                                    height: 12.0,
+                                  ),
                                   Text(
                                     'Rp 130.000,00',
                                     style: TextStyle(
@@ -80,7 +89,9 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                     ),
                                     overflow: TextOverflow.clip,
                                   ),
-                                  SizedBox(height: 32.0,),
+                                  SizedBox(
+                                    height: 32.0,
+                                  ),
                                   Row(
                                     children: [
                                       Expanded(
@@ -88,20 +99,27 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                         child: Container(
                                           child: Row(
                                             children: [
-                                              Icon(Icons.star_border, color: Color(0xFF25A0DE),),
-                                              SizedBox(width: 1.0,),
+                                              Icon(
+                                                Icons.star_border,
+                                                color: Color(0xFF986756),
+                                              ),
+                                              SizedBox(
+                                                width: 1.0,
+                                              ),
                                               Text(
                                                 '4.5',
                                                 style: TextStyle(
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                               ),
-                                              SizedBox(width: 1.0,),
+                                              SizedBox(
+                                                width: 1.0,
+                                              ),
                                               Text(
                                                 '(17)',
                                                 style: TextStyle(
-                                                  fontWeight: FontWeight.bold
-                                                ),
+                                                    fontWeight:
+                                                        FontWeight.bold),
                                               ),
                                             ],
                                           ),
@@ -111,7 +129,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                         flex: 1,
                                         child: Container(
                                           child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.end,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.end,
                                             children: [
                                               Text(
                                                 'Pembelian',
@@ -119,12 +138,14 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                               ),
-                                              SizedBox(width: 1.0,),
+                                              SizedBox(
+                                                width: 1.0,
+                                              ),
                                               Text(
                                                 '(127)',
                                                 style: TextStyle(
-                                                    fontWeight: FontWeight.bold
-                                                ),
+                                                    fontWeight:
+                                                        FontWeight.bold),
                                               ),
                                             ],
                                           ),
@@ -157,7 +178,10 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                   flex: 2,
                                   child: Container(
                                     padding: EdgeInsets.all(4.0),
-                                    child: CircleAvatar(maxRadius: 30.0,),
+                                    child: CircleAvatar(
+                                      maxRadius: 30.0,
+                                      backgroundColor: Colors.grey,
+                                    ),
                                   ),
                                 ),
                                 Expanded(
@@ -165,7 +189,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                   child: Container(
                                     alignment: Alignment.centerLeft,
                                     child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Text(
                                           'Klinik Cantik Mulus',
@@ -176,7 +201,9 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                           ),
                                           overflow: TextOverflow.clip,
                                         ),
-                                        SizedBox(height: 6.0,),
+                                        SizedBox(
+                                          height: 6.0,
+                                        ),
                                         Text(
                                           'Kota Bandung',
                                           style: TextStyle(
@@ -186,12 +213,19 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                           ),
                                           overflow: TextOverflow.clip,
                                         ),
-                                        SizedBox(height: 8.0,),
+                                        SizedBox(
+                                          height: 8.0,
+                                        ),
                                         Container(
                                           child: Row(
                                             children: [
-                                              Icon(Icons.star_border, color: Color(0xFF25A0DE),),
-                                              SizedBox(width: 1.0,),
+                                              Icon(
+                                                Icons.star_border,
+                                                color: Color(0xFF986756),
+                                              ),
+                                              SizedBox(
+                                                width: 1.0,
+                                              ),
                                               Text(
                                                 '4.5',
                                                 style: TextStyle(
@@ -221,11 +255,11 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                         style: TextStyle(fontSize: 12.0),
                                       ),
                                       color: Colors.white,
-                                      textColor: Color(0xFF0099FF),
+                                      textColor: Color(0xFF986756),
                                       elevation: 3.0,
                                       shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                        BorderRadius.all(Radius.circular(4.0)),
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(4.0)),
                                       ),
                                       onPressed: () {
                                         Navigator.push(
@@ -248,12 +282,12 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                         'Follow',
                                         style: TextStyle(fontSize: 14.0),
                                       ),
-                                      color: Color(0xFF0099FF),
+                                      color: Color(0xFF986756),
                                       textColor: Colors.white,
                                       elevation: 3.0,
                                       shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                        BorderRadius.all(Radius.circular(8.0)),
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(8.0)),
                                       ),
                                       onPressed: () {},
                                     ),
@@ -422,16 +456,16 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                               alignment: Alignment.centerLeft,
                               child: Text(
                                 'Komposisi : \n'
-                                    'Alcohol\n'
-                                    'Air\n'
-                                    'Mineral\n'
-                                    'Pemutih\n'
-                                    '\n'
-                                    '\n'
-                                    'Baik digunakan malam sebelum tidur, dan pagi. '
-                                    'Bersihkan wajah anda terlebih dulu sebelum menggunakan produk ini.'
-                                    'Akan lebih maksimal jika digunakan rutin.'
-                                    'Jika terdapat masalah penggunaan silakan hubungi dokter.',
+                                'Alcohol\n'
+                                'Air\n'
+                                'Mineral\n'
+                                'Pemutih\n'
+                                '\n'
+                                '\n'
+                                'Baik digunakan malam sebelum tidur, dan pagi. '
+                                'Bersihkan wajah anda terlebih dulu sebelum menggunakan produk ini.'
+                                'Akan lebih maksimal jika digunakan rutin.'
+                                'Jika terdapat masalah penggunaan silakan hubungi dokter.',
                                 style: TextStyle(
                                   color: Colors.black54,
                                 ),
@@ -455,7 +489,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                 child: Text(
                                   'Details',
                                   style: TextStyle(
-                                    color: Color(0xFF0099FF),
+                                    color: Color(0xFFE6BCA8),
                                   ),
                                 ),
                               ),
@@ -478,8 +512,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                               padding: EdgeInsets.all(10.0),
                               color: Colors.white54,
                               child: Column(
-                                crossAxisAlignment:
-                                CrossAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
                                     'Penilaian',
@@ -498,7 +531,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                       children: [
                                         Icon(
                                           Icons.star_border,
-                                          color: Color(0xFF25A0DE),
+                                          color: Color(0xFF986756),
                                           size: 20.0,
                                         ),
                                         SizedBox(
@@ -508,8 +541,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                           '4.5 / 5.0 (17)',
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold,
-                                              fontSize: 11.0
-                                          ),
+                                              fontSize: 11.0),
                                         ),
                                       ],
                                     ),
@@ -522,14 +554,16 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                               child: ConstrainedBox(
                                 constraints: BoxConstraints(minHeight: 56.0),
                                 child: ListView.separated(
-                                  padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 8.0, vertical: 8.0),
                                   physics: NeverScrollableScrollPhysics(),
                                   shrinkWrap: true,
                                   separatorBuilder: (context, index) => Divider(
                                     color: Colors.blueGrey,
                                   ),
                                   itemCount: 1, // Number of Review
-                                  itemBuilder: (context, index) => ProductReviewItem(),
+                                  itemBuilder: (context, index) =>
+                                      ProductReviewItem(),
                                 ),
                               ),
                             ),
@@ -544,7 +578,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                   child: Text(
                                     'See all',
                                     style: TextStyle(
-                                      color: Color(0xFF0099FF),
+                                      color: Color(0xFFE6BCA8),
                                     ),
                                   ),
                                 ),
@@ -554,7 +588,6 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                         ),
                       ),
                       //End of Review
-
                     ],
                   ),
                 ),
@@ -581,7 +614,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                               style: TextStyle(fontSize: 14.0),
                             ),
                             color: Colors.white,
-                            textColor: Color(0xFF0099FF),
+                            textColor: Color(0xFF986756),
                             elevation: 3.0,
                             shape: RoundedRectangleBorder(
                               borderRadius:
@@ -607,7 +640,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                               'Keranjang',
                               style: TextStyle(fontSize: 14.0),
                             ),
-                            color: Color(0xFF0099FF),
+                            color: Color(0xFF986756),
                             textColor: Colors.white,
                             elevation: 3.0,
                             shape: RoundedRectangleBorder(

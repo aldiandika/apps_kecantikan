@@ -22,6 +22,13 @@ class _RecipePageState extends State<RecipePage> {
       appBar: AppBar(
         title: Text("My Recipe"),
         centerTitle: true,
+        backgroundColor: Color(0xFF986756),
+        shape: RoundedRectangleBorder(
+          borderRadius: const BorderRadius.only(
+            bottomLeft: Radius.circular(20.0),
+            bottomRight: Radius.circular(20.0),
+          ),
+        ),
       ),
       body: Container(
         height: heightScreen,

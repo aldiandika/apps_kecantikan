@@ -61,7 +61,7 @@ class _TotalPaymentWidgetState extends State<TotalPaymentWidget> {
                       'Order',
                       style: TextStyle(fontSize: 12.0),
                     ),
-                    color: Color(0xFF0099FF),
+                    color: Color(0xFF986756),
                     textColor: Colors.white,
                     elevation: 3.0,
                     shape: RoundedRectangleBorder(

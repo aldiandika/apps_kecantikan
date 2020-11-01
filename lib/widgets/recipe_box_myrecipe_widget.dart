@@ -198,7 +198,7 @@ class RecipeBoxMyRecipe extends StatelessWidget {
             ),
             color: Colors.white,
             child: InkWell(
-              splashColor: Colors.blue,
+              splashColor:  Colors.black26,
               child: Container(
                 height: heightScreen * 0.03,
                 width: widthScreen,
@@ -212,7 +212,7 @@ class RecipeBoxMyRecipe extends StatelessWidget {
                 child: Text(
                   btnText,
                   style: TextStyle(
-                    color: Colors.blue,
+                    color: Color(0xFFE6BCA8),
                     fontWeight: FontWeight.bold,
                     fontSize: 13,
                   ),
